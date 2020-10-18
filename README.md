@@ -1,5 +1,19 @@
 # orphan_support-php 🛰
 
+[![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
+[![forthebadge](https://forthebadge.com/images/badges/built-with-swag.svg)](https://forthebadge.com)
+
+
+
+## Autumn of Open Source AOSS 2020
+<p align="center">
+  <a href="https://sanscript.tech/">
+    <img src="https://avatars3.githubusercontent.com/t/4187434?s=280&v=4" alt="Logo">
+  </a>
+
+
  
  ## Brief: 🎏
 This is a project based on the platform of web designing which will be a website developed for children and older people and will help them to sustain their living in an orphan.
@@ -48,7 +62,7 @@ git clone https://github.com/sanscript-tech/orphan_support-php.git
 
 ## Tech stacks used 🛴
 
-php , html, css, javascript
+**PHP, HTML, CSS, JavaScript**
 
 
 ## Create a branch ⚓
