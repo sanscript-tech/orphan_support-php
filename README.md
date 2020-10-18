@@ -8,12 +8,13 @@
 
 
 ## Autumn of Open Source AOSS 2020
+
 <p align="center">
   <a href="https://sanscript.tech/">
     <img src="https://avatars3.githubusercontent.com/t/4187434?s=280&v=4" alt="Logo">
   </a>
-
-
+  
+Autumn of Open Source, 2020, is an Open Source Program organized by **Sanscript India** to spread awareness and promote the culture of Open Source Projects development among beginners and youth. The program will continue for a month in which all participants. There will be highly skilled and experienced **Project Leaders*** and **Mentors** who will guide participants to contribute to Open Source Projects. In the end, participants who have performed well, will be announced as **winners**, and **rewards** will be distributed, including **internship** opportunities.
  
  ## Brief: 🎏
 This is a project based on the platform of web designing which will be a website developed for children and older people and will help them to sustain their living in an orphan.
