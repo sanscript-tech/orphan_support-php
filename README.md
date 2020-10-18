@@ -23,7 +23,9 @@ This is a project based on the platform of web designing which will be a website
  ## Overview 🎃
   This project is mainly ensured to build in an open source community to help the people of our country grow and develop themselves.
 
+## Tech stacks used 🛴
 
+**PHP, HTML, CSS, JavaScript**
 
  ### This project is under AOS 2020 (Autumn open source program) under Sanscript, India .🎉🎊
 
@@ -60,9 +62,7 @@ For example:
 git clone https://github.com/sanscript-tech/orphan_support-php.git
 ```
 
-## Tech stacks used 🛴
 
-**PHP, HTML, CSS, JavaScript**
 
 
 ## Create a branch ⚓
