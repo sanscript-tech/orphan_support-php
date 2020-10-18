@@ -12,10 +12,10 @@
     <title>Orphanage Support - Home</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/business-casual.css" rel="stylesheet">
+    <link href="./css/business-casual.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -55,13 +55,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="img/slider1.jpg" alt="">
+                                <img class="img-responsive img-full" src="./img/slider1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slider2.jpg" alt="">
+                                <img class="img-responsive img-full" src="./img/slider2.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="img/slider3.jpeg" alt="">
+                                <img class="img-responsive img-full" src="./img/slider3.jpeg" alt="">
                             </div>
                         </div>
 
@@ -89,7 +89,7 @@
                         <strong>SUPPORT US</strong>
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-left" src="img/into-pic.jpeg" alt="">
+                    <img class="img-responsive img-border img-left" src="./img/into-pic.jpeg" alt="">
                     <hr class="visible-xs">
                     <p>Every child needs a loving family, and we ensure this happens. With over 20 million children who need a family in India alone, we are here trying to make a difference. Although there are more than 2 crore foundations, we still think we have a lot more to do. Join us in this journey and support in your own way.</p>
                 </div>
@@ -110,10 +110,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="./js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
