@@ -1,5 +1,5 @@
 # orphan_support-php 🛰
-***Where all NGO can make their profile, and people can donate/adopt children's or Abandoned parents, also people can put a report about any orphan child or Abandoned parents.***
+***Where all NGOs can make their profiles, and people can donate/adopt children or abandoned parents. Also, people can put a report about any orphan child or abandoned parents.***
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
@@ -15,10 +15,10 @@
     <img src="https://avatars3.githubusercontent.com/t/4187434?s=280&v=4" alt="Logo">
   </a>
   
-Autumn of Open Source, 2020, is an Open Source Program organized by [**Sanscript India**](https://sanscript.tech) to spread awareness and promote the culture of Open Source Projects development among beginners and youth. The program will continue for a month in which all participants will contribute at their level of expertise. There will be highly skilled and experienced **Project Leaders*** and **Mentors** who will guide participants to contribute to Open Source Projects. In the end, participants who have performed well, will be announced as **winners**, and **rewards** will be distributed, including **internship** opportunities.
+Autumn of Open Source, 2020, is an Open Source Program organized by [**Sanscript India**](https://sanscript.tech) to spread awareness and promote the culture of Open Source Projects and Open Source development among beginners and youth. The program will continue for a month in which all participants will contribute as per their level of expertise. There would be highly skilled and experienced **Project Leaders** and **Mentors** who will guide participants to contribute to Open Source Projects. At the end, participants who would have performed well, would be announced as **winners** and **rewards** would be distributed, including **internship** opportunities.
  
- ## Brief: 🎏
-This is a project based on the platform of web designing which will be a website developed for children and older people and will help them to sustain their living in an orphan.
+ ## Brief 🎏
+This is a project based on the platform of web design which will be a website developed for the sake of children and older people and will help them to sustain their living in an orphanage.
 
 
 
