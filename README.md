@@ -42,7 +42,7 @@ Here's how you can kickstart your Open Source Journey, Good Luck!
   <img src="https://media.giphy.com/media/j1Xyt3DHfJcmk/giphy.gif" />
 </p>
 
-#### **Note** If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
+#### **Note** : If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
 
 ## Fork this repository 🚀
 
