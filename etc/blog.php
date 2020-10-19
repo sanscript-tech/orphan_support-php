@@ -12,10 +12,10 @@
     <title>Blog - Business Casual - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="assets/css/business-casual.css" rel="stylesheet">
+    <link href="../assets/css/business-casual.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -83,7 +83,7 @@
                     <hr>
                 </div>
                 <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="assets/img/slide-1.jpg" alt="">
+                    <img class="img-responsive img-border img-full" src="../assets/img/slider1.jpg" alt="">
                     <h2>Post Title
                         <br>
                         <small>October 13, 2013</small>
@@ -93,7 +93,7 @@
                     <hr>
                 </div>
                 <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="assets/img/slide-2.jpg" alt="">
+                    <img class="img-responsive img-border img-full" src="../assets/img/slider2.jpg" alt="">
                     <h2>Post Title
                         <br>
                         <small>October 13, 2013</small>
@@ -103,7 +103,7 @@
                     <hr>
                 </div>
                 <div class="col-lg-12 text-center">
-                    <img class="img-responsive img-border img-full" src="assets/img/slide-3.jpg" alt="">
+                    <img class="img-responsive img-border img-full" src="../assets/img/slider3.jpeg" alt="">
                     <h2>Post Title
                         <br>
                         <small>October 13, 2013</small>
@@ -137,10 +137,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="assets/js/jquery.js"></script>
+    <script src="../assets/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
 
 </body>
 
