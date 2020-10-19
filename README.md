@@ -8,7 +8,7 @@
 
 
 
-## Autumn of Open Source AOSS 2020
+## Autumn of Open Source AOS 2020
 
 <p align="center">
   <a href="https://sanscript.tech/">
