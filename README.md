@@ -127,6 +127,10 @@ replacing `<branch-name>` with the name of the branch you created earlier.
 ## Submit your changes for review 🚩
 
 If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
+<p align="center">
+  <img src="/assets/img/compare.png" />
+</p>
+
 
 Now submit the pull request.
 
