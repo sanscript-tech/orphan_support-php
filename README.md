@@ -1,5 +1,5 @@
 # orphan_support-php 🛰
-***Where all NGOs can make their profiles, and people can donate/adopt children or abandoned parents. Also, people can put a report about any orphan child or abandoned parents.***
+***Where all NGOs can make their profiles, and people can adopt/donate children or abandoned parents. Also, people can put a report about any orphan child or abandoned parents.***
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
@@ -37,8 +37,12 @@ This is a project based on the platform of web design which will be a website de
 
  ## How to start ? 🎪
 
+Here's how you can kickstart your Open Source Journey, Good Luck!
+<p align="center">
+  <img src="https://media.giphy.com/media/j1Xyt3DHfJcmk/giphy.gif" />
+</p>
 
-#### If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
+#### **Note** If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
 
 ## Fork this repository 🚀
 
