@@ -48,6 +48,9 @@ Here's how you can kickstart your Open Source Journey, Good Luck!
 
 Fork this repository by clicking on the fork button on the top of this page.
 This will create a copy of this repository in your account.
+<p align="center">
+  <img src="/assets/img/fork.png" />
+</p>
 
 ## Clone the repository 🏁
 
