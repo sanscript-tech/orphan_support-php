@@ -35,7 +35,7 @@
     <div class="brand">Orphanage Support</div>
     <div class="address-bar">Pune | Mumbai | Nashik</div>
 
-	
+
     <!-- Navigation -->
     <?php require_once 'nav.php'; ?>
 
@@ -85,7 +85,7 @@
             <div class="box">
                 <div class="col-lg-12">
                     <hr>
-                    <h2 class="intro-text text-center">HOW TO 
+                    <h2 class="intro-text text-center">HOW TO
                         <strong>SUPPORT US</strong>
                     </h2>
                     <hr>
