@@ -12,10 +12,10 @@
     <title>Business Casual - Start Bootstrap Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="assets/css/business-casual.css" rel="stylesheet">
+    <link href="../assets/css/business-casual.css" rel="stylesheet">
 
     <!-- Fonts -->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
@@ -87,13 +87,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner">
                             <div class="item active">
-                                <img class="img-responsive img-full" src="assets/img/slide-1.jpg" alt="">
+                                <img class="img-responsive img-full" src="../assets/img/slider1.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="assets/img/slide-2.jpg" alt="">
+                                <img class="img-responsive img-full" src="../assets/img/slider2.jpg" alt="">
                             </div>
                             <div class="item">
-                                <img class="img-responsive img-full" src="assets/img/slide-3.jpg" alt="">
+                                <img class="img-responsive img-full" src="../assets/img/slider3.jpeg" alt="">
                             </div>
                         </div>
 
@@ -127,7 +127,7 @@
                         <strong>worth visiting</strong>
                     </h2>
                     <hr>
-                    <img class="img-responsive img-border img-left" src="assets/img/intro-pic.jpg" alt="">
+                    <img class="img-responsive img-border img-left" src="../assets/img/into-pic.jpeg" alt="">
                     <hr class="visible-xs">
                     <p>The boxes used in this template are nested inbetween a normal Bootstrap row and the start of your column layout. The boxes will be full-width boxes, so if you want to make them smaller then you will need to customize.</p>
                     <p>A huge thanks to <a href="http://join.deathtothestockphoto.com/" target="_blank">Death to the Stock Photo</a> for allowing us to use the beautiful photos that make this template really come to life. When using this template, make sure your photos are decent. Also make sure that the file size on your photos is kept to a minumum to keep load times to a minimum.</p>
@@ -164,10 +164,10 @@
     </footer>
 
     <!-- jQuery -->
-    <script src="assets/js/jquery.js"></script>
+    <script src="../assets/js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
 
     <!-- Script to Activate the Carousel -->
     <script>
