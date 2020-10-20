@@ -1,5 +1,7 @@
 # orphan_support-php 🛰
-***Where all NGOs can make their profiles, and people can adopt/donate children or abandoned parents. Also, people can put a report about any orphan child or abandoned parents.***
+
+***Where all NGOs can make their profile, and people can donate to/adopt children or abandoned parents, also people can put a report about an orphan child or abandoned parents.***
+
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
@@ -15,27 +17,32 @@
     <img src="https://avatars3.githubusercontent.com/t/4187434?s=280&v=4" alt="Logo">
   </a>
   
-Autumn of Open Source, 2020, is an Open Source Program organized by [**Sanscript India**](https://sanscript.tech) to spread awareness and promote the culture of Open Source Projects and Open Source development among beginners and youth. The program will continue for a month in which all participants will contribute as per their level of expertise. There would be highly skilled and experienced **Project Leaders** and **Mentors** who will guide participants to contribute to Open Source Projects. At the end, participants who would have performed well, would be announced as **winners** and **rewards** would be distributed, including **internship** opportunities.
  
  ## Brief 🎏
 This is a project based on the platform of web design which will be a website developed for the sake of children and old people which will help them to sustain their living in an orphanage.
 
+Autumn of Open Source, 2020, is an Open Source Program organized by [**Sanscript India**](https://sanscript.tech) to spread awareness and promote the culture of Open Source Projects development among beginners and youth. The program will continue for a month in which all participants will contribute to their level of expertise. There will be highly skilled and experienced **Project Leaders*** and **Mentors** who will guide participants to contribute to Open Source Projects. In the end, participants who have performed well will be announced as **winners**, and **rewards** will be distributed, including **internship** opportunities.
+ 
+
+
 
 
  ## Overview 🎃
+
   This project is mainly ensured to be built in an open source community to help the people of our country grow and develop themselves.
+
 
 ## Tech stacks used 🛴
 
 **PHP, HTML, CSS, JavaScript**
 
- ### This project is under AOS 2020 (Autumn open source program) under Sanscript, India .🎉🎊
+ ### This project is under AOS 2020 (Autumn open source program) under Sanscript, India.🎉🎊
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 
 
- ## How to start ? 🎪
+ ## How to start? 🎪
 
 Here's how you can kickstart your Open Source Journey, Good Luck!
 <p align="center">
@@ -59,13 +66,13 @@ Now clone the forked repository to your machine. Go to your GitHub account, open
   <img src="/assets/img/clone.png" />
 </p>
 
+
 Open a terminal and run the following git command:
 
 ```
-git clone "url you just copied"
+git clone "https://github.com/<YOUR_USERNAME>/orphan_support-php.git"
 ```
-
-where "url you just copied" (without the quotation marks) is the url to this repository (your fork of this project). See the previous steps to obtain the url.
+replace <YOUR_USERNAME> by the your GitHub username.
 
 
 For example:
@@ -112,10 +119,10 @@ git add .
 Now commit those changes using the `git commit` command:
 
 ```
-git commit -m "(Add your message here)"
+git commit -m "<Add your message here>"
 ```
 
-replacing `<Add your message here>` with your message.
+replace `<Add your message here>` with your message.
 
 ## Push changes to GitHub 🪂
 
