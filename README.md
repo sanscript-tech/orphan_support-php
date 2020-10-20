@@ -18,12 +18,12 @@
 Autumn of Open Source, 2020, is an Open Source Program organized by [**Sanscript India**](https://sanscript.tech) to spread awareness and promote the culture of Open Source Projects and Open Source development among beginners and youth. The program will continue for a month in which all participants will contribute as per their level of expertise. There would be highly skilled and experienced **Project Leaders** and **Mentors** who will guide participants to contribute to Open Source Projects. At the end, participants who would have performed well, would be announced as **winners** and **rewards** would be distributed, including **internship** opportunities.
  
  ## Brief 🎏
-This is a project based on the platform of web design which will be a website developed for the sake of children and older people and will help them to sustain their living in an orphanage.
+This is a project based on the platform of web design which will be a website developed for the sake of children and old people which will help them to sustain their living in an orphanage.
 
 
 
  ## Overview 🎃
-  This project is mainly ensured to build in an open source community to help the people of our country grow and develop themselves.
+  This project is mainly ensured to be built in an open source community to help the people of our country grow and develop themselves.
 
 ## Tech stacks used 🛴
 
@@ -55,6 +55,9 @@ This will create a copy of this repository in your account.
 ## Clone the repository 🏁
 
 Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the code button and then click the _copy to clipboard_ icon.
+<p align="center">
+  <img src="/assets/img/clone.png" />
+</p>
 
 Open a terminal and run the following git command:
 
@@ -138,4 +141,11 @@ Now submit the pull request.
 </p>
 
 Soon we will be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
+
+## Hoorayy!🎉
+<p align="center">
+  <img src="https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif" />
+</p>
+
+You’ve successfully forked and contributed back to this repository. Go forth, and contribute some more!
 
