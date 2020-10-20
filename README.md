@@ -1,5 +1,7 @@
 # orphan_support-php 🛰
+
 ***Where all NGOs can make their profile, and people can donate to/adopt children or abandoned parents, also people can put a report about an orphan child or abandoned parents.***
+
 
 [![forthebadge](https://forthebadge.com/images/badges/built-by-developers.svg)](https://forthebadge.com)
 [![forthebadge](https://forthebadge.com/images/badges/built-with-love.svg)](https://forthebadge.com)
@@ -15,15 +17,20 @@
     <img src="https://avatars3.githubusercontent.com/t/4187434?s=280&v=4" alt="Logo">
   </a>
   
-Autumn of Open Source, 2020, is an Open Source Program organized by [**Sanscript India**](https://sanscript.tech) to spread awareness and promote the culture of Open Source Projects development among beginners and youth. The program will continue for a month in which all participants will contribute to their level of expertise. There will be highly skilled and experienced **Project Leaders*** and **Mentors** who will guide participants to contribute to Open Source Projects. In the end, participants who have performed well will be announced as **winners**, and **rewards** will be distributed, including **internship** opportunities.
  
  ## Brief 🎏
-This is a project based on the platform of web designing which will be a website developed for children and older people and will help them to sustain their living in an orphan.
+This is a project based on the platform of web design which will be a website developed for the sake of children and old people which will help them to sustain their living in an orphanage.
+
+Autumn of Open Source, 2020, is an Open Source Program organized by [**Sanscript India**](https://sanscript.tech) to spread awareness and promote the culture of Open Source Projects development among beginners and youth. The program will continue for a month in which all participants will contribute to their level of expertise. There will be highly skilled and experienced **Project Leaders*** and **Mentors** who will guide participants to contribute to Open Source Projects. In the end, participants who have performed well will be announced as **winners**, and **rewards** will be distributed, including **internship** opportunities.
+ 
+
 
 
 
  ## Overview 🎃
-  This project is mainly ensured to build in an open-source community to help the people of our country grow and develop themselves.
+
+  This project is mainly ensured to be built in an open source community to help the people of our country grow and develop themselves.
+
 
 ## Tech stacks used 🛴
 
@@ -37,17 +44,28 @@ This is a project based on the platform of web designing which will be a website
 
  ## How to start? 🎪
 
+Here's how you can kickstart your Open Source Journey, Good Luck!
+<p align="center">
+  <img src="https://media.giphy.com/media/j1Xyt3DHfJcmk/giphy.gif" />
+</p>
 
-#### If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
+#### **Note** : If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
 
 ## Fork this repository 🚀
 
 Fork this repository by clicking on the fork button on the top of this page.
 This will create a copy of this repository in your account.
+<p align="center">
+  <img src="/assets/img/fork.png" />
+</p>
 
 ## Clone the repository 🏁
 
-Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the code button, and then click the _copy to clipboard_ icon.
+Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the code button and then click the _copy to clipboard_ icon.
+<p align="center">
+  <img src="/assets/img/clone.png" />
+</p>
+
 
 Open a terminal and run the following git command:
 
@@ -119,8 +137,22 @@ replacing `<branch-name>` with the name of the branch you created earlier.
 ## Submit your changes for review 🚩
 
 If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
+<p align="center">
+  <img src="/assets/img/compare.png" />
+</p>
+
 
 Now submit the pull request.
+<p align="center">
+  <img src="/assets/img/pullrequest.png" />
+</p>
 
 Soon we will be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
+
+## Hoorayy!🎉
+<p align="center">
+  <img src="https://media.giphy.com/media/xT0xezQGU5xCDJuCPe/giphy.gif" />
+</p>
+
+You’ve successfully forked and contributed back to this repository. Go forth, and contribute some more!
 
