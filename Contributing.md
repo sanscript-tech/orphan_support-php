@@ -5,7 +5,7 @@
 ---
 ![GitHub custom open for collaboration](https://img.shields.io/badge/Open%20For-Collaboration-brightgreen?style=for-the-badge)
 
-## Autumn of Open Source AOS 2020
+## Autumn of Open Source AOS 2020:rainbow:
 
 <p align="center">
   <a href="https://sanscript.tech/">
@@ -22,11 +22,11 @@
 
 * Every contribution counts, and will go a long way towards betterment of the code and/or its related files.
 
-## Assistance to get started
+## Assistance to get started:page_facing_up:
 
 If you're new to contributing and have no idea about working with repositories, be sure to check [GitHub docs to getting started](https://docs.github.com/en/free-pro-team@latest/github/getting-started-with-github) from GitHub may also be helpful to refer.
 
-## Essential Guidelines for contribution against Autumn of Open Source 2020:
+## Essential Guidelines for contribution against Autumn of Open Source 2020::bookmark_tabs:
 
 Before you start off with the contribution, 
 
@@ -36,18 +36,18 @@ Before you start off with the contribution,
 
 * Wait for ***approval***. After it's assigned to you then move on further, fork the repository and clone it (if haven't yet done) and start your work according to the guidelines given in the [README.md](https://github.com/sanscript-tech/orphan_support-php/blob/main/README.md) of repository.
 
-## Steps to Contribute in GitHub Repository
+## Steps to Contribute in GitHub Repository:pushpin:
 
 ***If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).***
 
 ### 1. Fork this repository 🚀
 
-Fork this repository by clicking on the fork button on the top of this page.
+* Fork this repository by clicking on the fork button on the top of this page.
 <p align="center">
     <img src="https://raw.githubusercontent.com/bhavesh1129/orphan_support-php/main/assets/img/fork.png"/>
   </a>
  
-This will create a copy of this repository in your account.
+* This will create a copy of this repository in your account.
 
 ### 2. Clone the repository 🏁
 
@@ -64,33 +64,30 @@ This will create a copy of this repository in your account.
 git clone "url you just copied"
 ```
 
-where "url you just copied" (without the quotation marks) is the url to this repository (your fork of this project). See the previous steps to obtain the url.
+   where "url you just copied" (without the quotation marks) is the url to this repository (your fork of this project). See the previous steps to obtain the url.
 
 
-For example:
+* For example:
 
 ```
 git clone https://github.com/sanscript-tech/orphan_support-php.git
 ```
 
-
-
-
 ### 3. Create a branch ⚓
 
-Change to the repository directory on your computer (if you are not already there):
+* Change to the repository directory on your computer (if you are not already there):
 
 ```
 cd (filename)
 ```
 
-Now create a branch using the `git checkout` command:
+* Now create a branch using the `git checkout` command:
 
 ```
 git checkout -b your-new-branch-name
 ```
 
-For example:
+* For example:
 
 ```
 git checkout -b dev_username
@@ -98,11 +95,11 @@ git checkout -b dev_username
 
 ### 4. Make necessary changes and commit those changes 🚏
 
-Do the necessary changes.
+* Do the necessary changes.
 
-If you go to the project directory and execute the command `git status`, you'll see there are changes.
+* If you go to the project directory and execute the command `git status`, you'll see there are changes.
 
-Add those changes to the branch you just created using the `git add` command:
+* Add those changes to the branch you just created using the `git add` command:
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/bhavesh1129/orphan_support-php/main/assets/img/Add.png">
@@ -112,7 +109,7 @@ Add those changes to the branch you just created using the `git add` command:
 git add .
 ```
 
-Now commit those changes using the `git commit` command:
+* Now commit those changes using the `git commit` command:
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/bhavesh1129/orphan_support-php/main/assets/img/Commit.png">
@@ -122,11 +119,11 @@ Now commit those changes using the `git commit` command:
 git commit -m "(Add your message here)"
 ```
 
-replacing `<Add your message here>` with your message.
+   replacing `<Add your message here>` with your message.
 
 ### 5. Push changes to GitHub 🪂
 
-Push your changes using the command `git push`:
+* Push your changes using the command `git push`:
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/bhavesh1129/orphan_support-php/main/assets/img/push.png">
@@ -136,23 +133,23 @@ Push your changes using the command `git push`:
 git push origin <branch-name>
 ```
 
-replacing `<branch-name>` with the name of the branch you created earlier.
+   replacing `<branch-name>` with the name of the branch you created earlier.
 
 ### 6. Submit your changes for review 🚩
 
-If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
+* If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/bhavesh1129/orphan_support-php/main/assets/img/compare.png">
   </a>
 
-Now submit the pull request.
+* Now submit the pull request.
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/bhavesh1129/orphan_support-php/main/assets/img/pullrequest.png">
   </a>
 
-Soon we will be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
+* Soon we will be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
 
 
 ## More Contribution Guidelines :guard::page_with_curl:
