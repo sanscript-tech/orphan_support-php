@@ -3663,7 +3663,9 @@ img{
 
 .main-footer .social-links li a{
 	position:relative;
-	display:block;
+	display:flex;
+	justify-content: center;
+	align-items: center;
 	color:#9ea0a9;
 	font-size:14px;
 	width:42px;
