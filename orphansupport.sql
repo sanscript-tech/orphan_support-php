@@ -60,6 +60,8 @@ CREATE TABLE `donateus` (
   `donaterName` varchar(255) NOT NULL,
   `donaterPhoneNumber` int(255) NOT NULL,
   `donaterEmail` varchar(255) NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `stripeCheckoutSession` varchar(255) NOT NULL,
   `donatedAmount` int(255) NOT NULL,
   `donatingIssue` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
