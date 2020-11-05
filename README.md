@@ -138,13 +138,14 @@ replacing `<branch-name>` with the name of the branch you created earlier.
 
 If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/53649201/98224173-2bb94c80-1f79-11eb-98f3-125b2df226ab.png" />
+  <img src="https://user-images.githubusercontent.com/53649201/98225695-0af1f680-1f7b-11eb-9e47-c2217f18319d.png" />
 </p>
 
 
-Now submit the pull request.
+
+</br>Now submit the pull request.
 <p align="center">
-  <img src="/assets/img/pullrequest.png" />
+  <img src="https://user-images.githubusercontent.com/53649201/98225580-e1d16600-1f7a-11eb-8b9b-acfaec5323ba.png" />
 </p>
 
 Soon we will be merging all your changes into the master branch of this project. You will get a notification email once the changes have been merged.
