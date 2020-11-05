@@ -51,19 +51,19 @@ Here's how you can kickstart your Open Source Journey, Good Luck!
 
 #### **Note** : If you don't have git on your machine, [install it](https://help.github.com/articles/set-up-git/).
 
-## Fork this repository 🚀
+## Fork this repository :fork_and_knife:
 
-Fork this repository by clicking on the fork button on the top of this page.
+Fork this repository by clicking on the <kbd><b>Fork</b></kbd> button on the top of this page.
 This will create a copy of this repository in your account.
 <p align="center">
-  <img src="/assets/img/fork.png" />
+  <img src="https://user-images.githubusercontent.com/53649201/98223175-c0bb4600-1f77-11eb-8da4-d62c8644f4cf.jpg" />
 </p>
 
-## Clone the repository 🏁
+## Clone the repository :busts_in_silhouette:
 
-Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the code button and then click the _copy to clipboard_ icon.
+Now clone the forked repository to your machine. Go to your GitHub account, open the forked repository, click on the <kbd><b>Code</b></kbd> button and then click the _copy to clipboard_ :clipboard: icon.
 <p align="center">
-  <img src="/assets/img/clone.png" />
+  <img src="https://user-images.githubusercontent.com/53649201/98223075-a1bcb400-1f77-11eb-9240-dfa6793fe2f1.png" />
 </p>
 
 
@@ -138,7 +138,7 @@ replacing `<branch-name>` with the name of the branch you created earlier.
 
 If you go to your repository on GitHub, you'll see a `Compare & pull request` button. Click on that button.
 <p align="center">
-  <img src="/assets/img/compare.png" />
+  <img src="https://user-images.githubusercontent.com/53649201/98224173-2bb94c80-1f79-11eb-98f3-125b2df226ab.png" />
 </p>
 
 
