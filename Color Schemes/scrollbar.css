@@ -1,0 +1,18 @@
+/*for firefox*/
+* {
+  scrollbar-width: thick;
+  scrollbar-color: #87a5c4 white;
+}
+/*for other browsers*/
+*::-webkit-scrollbar {
+  width: 12px;
+}
+*::-webkit-scrollbar-track {
+  background: white;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #87a5c4;
+}
+::-webkit-scrollbar-thumb:active {
+  background:#c2dde6;
+}

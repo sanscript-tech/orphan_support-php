@@ -1,0 +1,970 @@
+@media only screen and (max-width: 7000px){
+	.page-wrapper{
+		overflow: hidden;
+	}
+	
+}
+
+@media only screen and (max-width: 1340px){
+	.about-section .upper-boxes{
+		margin-bottom: 20px;
+	}
+
+	.about-section.style-two{
+		padding-bottom: 100px;
+	}
+
+	.sec-title h2,
+	.page-banner h1{
+		font-size: 48px;
+	}
+
+	.banner-carousel .content-box h2{
+		font-size: 64px;
+		line-height: 1.2em;
+	}
+}
+
+@media only screen and (max-width: 1139px){
+	.main-header .header-top .top-left{
+		display: none;
+	}
+
+	.main-menu .navigation > li{
+		margin-right: 30px;
+	}
+
+	.main-header .nav-outer .main-menu,
+	.sticky-header{
+		display: none !important;
+	}
+
+	.nav-outer .mobile-nav-toggler{
+		display: block;
+	}
+
+	.fact-counter .column .inner .count-outer{
+		font-size: 64px;
+		line-height: 1.2em;
+	}
+
+	.about-section .right-column .inner,
+	.donate-section .form-column .inner{
+		padding-left: 0;
+	}
+
+	.mission-vision .text-column .inner{
+		padding-top: 0;
+		padding-right: 0;
+		padding-left: 0;
+	}
+
+	.video-section .text-column .inner{
+		padding-top: 0;
+	}
+
+	.banner-section .owl-nav .owl-prev{
+		left: 15px;
+	}
+
+	.banner-section .owl-nav .owl-next{
+		right: 15px;
+	}
+
+	.about-section.style-two .left-column .inner{
+		max-width: none;
+		padding-right: 0;
+	}
+
+	.about-section.style-two{
+		padding-bottom: 70px;
+	}
+
+	.style-three .banner-carousel .slide-item{
+		padding: 220px 0px 200px;
+	}
+
+	.about-section.style-three .left-column .inner{
+		padding-left: 0;
+		padding-top: 0;
+	}
+
+	.team-carousel-section .title-box .text{
+		margin-left: 50px;
+	}
+
+	.news-block-three .inner-box{
+		padding: 40px 20px;
+	}
+
+	.news-block-three .news-post{
+		min-height: 170px;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+	}
+
+	.about-section.style-three .left-column{
+		order: 0;
+	}
+
+	.about-section.style-three{
+		padding-bottom: 100px;
+	}
+
+	.team-carousel-section{
+		padding-top: 100px;
+	}
+
+	.team-carousel-section.no-padding-top{
+		padding-top: 0;
+	}
+
+	.fluid-section .image-column,
+	.fluid-section .text-column{
+		position: relative;
+		width: 100%;
+	}
+
+	.fluid-section .image-column .image{
+		display: block;
+	}
+
+	.fluid-section .image-column .image-layer{
+		display: none;
+	}
+
+	.fluid-section .text-column .inner{
+		padding: 80px 20px 120px;
+	}
+
+	.fluid-section .owl-dots{
+		left: 0;
+		right: auto;
+		top: auto;
+		bottom: -40px;
+		width: 100%;
+		height: 0;
+		margin: 0;
+	}
+
+	.fluid-section .owl-dots .owl-dot{
+		display: inline-block;
+		margin: 0 5px;
+	}
+
+	.page-banner{
+		padding: 100px 0px 120px;
+	}
+
+	.faq-section .content-column .inner{
+		padding-left: 0;
+	}
+
+	.faq-section .title-column h2,
+	.donate-section .title-column h2{
+		font-size: 42px;
+	}
+
+	.sidebar-side .sidebar{
+		padding: 45px 20px;
+	}
+
+	.shop-upper-box .items-label,
+	.shop-upper-box .sort-by{
+		width: 50%;
+	}
+
+	.shop-upper-box .layout-mode{
+		display: none;
+	}
+
+	.product-details .image-column .inner{
+		padding-right: 0;
+	}
+
+	.donate-section .title-column .text{
+		margin-bottom: 30px;
+	}
+	
+	.event-block-two .title-column h3 br,
+	.news-block .inner-box h3 br{
+		display:none;	
+	}
+}
+
+@media only screen and (min-width: 768px){
+	.main-menu .navigation > li > ul,
+	.main-menu .navigation > li > ul > li > ul{
+		display:block !important;
+		visibility:hidden;
+		opacity:0;
+	}
+}
+
+@media only screen and (max-width: 1023px){
+	
+	.newsletter-section .form-column .inner-column {
+		padding-left: 0;
+		width: 100%;
+	}
+
+	.style-three .banner-carousel .slide-item{
+		padding: 120px 0px 140px;
+	}
+
+	.main-header.header-style-two{
+		top: 20px;
+	}
+
+	.main-header.header-style-three{
+		position: relative;
+		background-color: #25283a;
+	}
+
+	.main-header .header-top .inner{
+		padding-left: 0;
+	}
+
+	.main-header .header-upper .inner-container,
+	.main-header.header-style-two .header-upper .inner-container{
+		padding-left: 0;
+	}
+
+	.main-header .header-upper .logo-box{
+		position: relative;
+		float: left;
+		top: 0;
+		left: 0;
+		padding: 0px;
+		height: auto;
+		width: auto;
+		z-index:15;
+		overflow:visible;
+	}
+
+	.main-header.header-style-two .header-upper .logo-box{
+		left: 0;
+		border-radius: 20px 0px 0px 20px;
+	}
+
+	.main-header .header-upper .logo-box .logo{
+		padding: 15px 30px;
+		border-radius: 0px;
+	}
+
+	.main-header .header-upper .logo-box .logo:before{
+		height:25px;
+		width:100%;
+		right:auto;
+		top:auto;
+		left:0;
+		bottom:-20px;
+		transform:none !important;
+		border-radius:0px 0px 10px 10px;
+	}
+
+	.main-header .header-upper .logo-box .logo img{
+		height: 90px;
+	}
+
+	.main-header .nav-outer{
+		width: auto;
+	}
+
+	.about-section .left-column .inner{
+		max-width: none;
+		padding-top: 0;
+		text-align: center;
+	}
+
+	.video-section{
+		padding: 120px 0px;
+	}
+
+	.video-section .text-column .inner{
+		padding-top: 0;
+	}
+
+	.video-section .image-layer{
+		display: none;
+	}
+
+	.video-section .text-column{
+		order: 0;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+
+	.video-section .image-column .inner{
+		padding: 0;
+		max-width: 650px;
+		margin: 0 auto;
+	}
+
+	.vision .text-column{
+		order: 0;
+	}
+
+	.main-footer .links-widget .widget-content{
+		padding-left: 0;
+	}
+
+	.banner-carousel .slide-item{
+		padding: 100px 0px 120px;
+	}
+
+	.cause-block-three .text-column .inner,
+	.event-block .text-column .inner{
+		padding: 30px 20px;
+	}
+
+	.cause-block-three h3.
+	.event-block h3{
+		font-size: 24px;
+	}
+
+	section .circle-one,
+	section .circle-two,
+	section .circle-three,
+	section .circle-four{
+		display: none;
+	}
+
+	.about-section,
+	.causes-section,
+	.mission-vision,
+	.news-section,
+	.donate-section{
+		padding: 100px 0px 70px;
+	}
+
+	.video-section{
+		padding: 100px 0px 120px;
+	}
+
+	.what-we-do{
+		padding: 100px 0px 0px;
+	}
+
+	.mission{
+		margin-bottom: 20px;
+	}
+
+	.call-to-action{
+		padding: 100px 0px 85px;
+	}
+
+	.team-section{
+		padding: 100px 0px 50px;
+	}
+
+	.upcoming-events{
+		padding: 100px 0px;
+	}
+
+	.main-footer .widgets-section{
+		padding: 80px 0px;
+	}
+
+	.call-to-action-two h2{
+		font-size: 36px;
+	}
+
+	.page-banner h1{
+		font-size: 42px;
+	}
+
+	.style-two .banner-carousel .slide-item{
+		padding: 250px 0px 170px;
+	}
+
+	.what-we-do.style-two{
+		text-align: center;
+	}
+
+	.team-carousel-section .title-box .sec-title,
+	.team-carousel-section .title-box .text{
+		width: 100%;
+		margin-left: 0;
+		text-align: center;
+		max-width: none;
+	}
+
+	.team-carousel-section .title-box .text{
+		padding-top: 20px;
+	}
+
+	.team-carousel-section .owl-nav{
+		position: relative;
+		left: -10px;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		padding-top: 70px;
+		text-align: center;
+	}
+
+	.event-block-two .info-column .inner{
+		padding-left: 0;
+	}
+
+	.event-block-two .info-column .inner:before{
+		display: none;
+	}
+
+	.event-block-two .info-column .info{
+		width: 260px;
+	}
+
+	.event-block-two .info-column .link-box{
+		float: left;
+	}
+
+	.about-section .upper-boxes{
+		margin-bottom: 0;
+	}
+
+	.about-section.style-two{
+		padding-bottom: 100px;
+	}
+
+	.what-we-do.style-two{
+		padding: 120px 0px 70px;
+	}
+
+	.how-it-works{
+		padding: 100px 0px 50px;
+	}
+
+	.team-carousel-section{
+		padding-bottom: 100px;
+	}
+
+	.event-block-two .inner-box{
+		padding: 30px;
+	}
+
+	.text-blocks{
+		padding-top: 50px;
+	}
+
+	.about-section.alternate{
+		padding:100px 0px 70px;
+	}
+
+	.faq-section{
+		padding: 90px 0px 100px;
+	}
+
+	.sidebar-page-container,
+	.events-section,
+	.gallery-page-section{
+		padding: 100px 0px 70px;
+	}
+
+	.event-details .inner-box h2{
+		font-size: 30px;
+	}
+
+	.mixitup-gallery .filters li{
+		padding: 10px 25px;
+		line-height: 24px;
+		border-radius: 22px;
+		min-width: 0;
+	}
+
+	.shop-page .content-side{
+		order: 0;
+	}
+
+	.product-details,
+	.contact-info-section{
+		padding: 100px 0px 70px;
+	}
+
+	.related-products{
+		padding-bottom: 70px;
+	}
+
+	.product-details .basic-details{
+		padding-bottom: 0;
+	}
+
+	.cart-section,
+	.checkout-page,
+	.contact-section .form-column{
+		padding: 100px 0px;
+	}
+
+	.info-box h4{
+		font-size: 20px;
+	}
+
+	.contact-section .form-column,
+	.contact-section .map-column{
+		width: 100%;
+		position: relative;
+		float: left;
+	}
+	.contact-section .map-column .map-canvas{
+		position: relative;
+		height: 400px;
+	}
+	.contact-section .form-column .inner{
+		max-width: none;
+	}
+	
+	.banner-section .owl-nav{
+		opacity:0;	
+	}
+	
+	.banner-section:hover .owl-nav{
+		opacity:1;	
+	}
+}
+
+@media only screen and (max-width: 767px){	
+	.banner-carousel .content-box h2{
+		font-size: 48px;
+	}
+
+	.banner-carousel .content-box .text{
+		font-size: 16px;
+	}
+
+	.sec-title h2,
+	.what-we-do.style-two .sec-title h2{
+		font-size: 42px;
+	}
+
+	.what-we-do{
+		text-align: center;
+	}
+
+	.cause-block-three .image-column,
+	.event-block .image-column{
+		position: relative;
+		width: 100%;
+		height: auto;
+	}
+
+	.cause-block-three .image-column .bg-image-layer,
+	.event-block .image-column .bg-image-layer{
+		display: none;
+	}
+
+	.cause-block-three .image-column .image-box,
+	.event-block .image-column .image-box{
+		display: block;
+	}
+
+	.cause-block-three .text-column,
+	.event-block .text-column{
+		width: 100%;
+	}
+
+	.news-section .title-box .sec-title{
+		width: 100%;
+		text-align: center;
+	}
+
+	.news-section .title-box .link{
+		width: 100%;
+		text-align: center;
+	}
+
+	.news-block .post-meta{
+		padding-top: 20px;
+	}
+
+	.main-footer .nav-box .inner{
+		border-radius: 5px;
+		padding: 20px 20px;
+		text-align: center;
+	}
+
+	.main-footer .nav-box .inner .footer-nav,
+	.main-footer .nav-box .inner .donate-link{
+		width: 100%;
+	}
+
+	.main-footer .nav-box .inner .donate-link .theme-btn{
+		display: inline-block;
+	}
+
+	.main-footer .nav-box .inner .footer-nav li{
+		display: inline-block;
+		float: none;
+		margin: 0px 10px 5px;
+	}
+
+	.main-footer .footer-bottom .copyright,
+	.main-footer .footer-bottom .bottom-links{
+		width: 100%;
+		text-align: center;
+	}
+
+	.main-footer .footer-bottom .bottom-links li{
+		margin: 0px 10px;
+	}
+
+	.main-footer .footer-bottom .bottom-links li:before{
+		display: none;
+	}
+
+	.sec-title h2,
+	.what-we-do.style-two .sec-title h2{
+		font-size: 36px;
+	}
+
+
+	.banner-carousel .content-box h2{
+		font-size: 36px;
+	}
+
+	.call-to-action-two .title-box,
+	.call-to-action-two .link-box{
+		width: 100%;
+		text-align: center;
+	}
+
+	.call-to-action-two .link-box .theme-btn{
+		display: inline-block;
+	}
+
+	.about-section .upper-boxes{
+		text-align: center;
+	}
+
+	.event-block-two .title-column .inner{
+		padding: 0;
+	}
+
+	.event-block-two .title-column .image-box{
+		position: relative;
+		width: 100%;
+		margin: 0 0 30px;
+	}
+
+	.event-block-two .info-column .inner{
+		padding-top: 20px;
+	}
+
+	.event-block-two .info-column .info,
+	.event-block-two .info-column .link-box{
+		width: 100%;
+	}
+
+	.event-block-two .info-column .link-box{
+		padding-top: 20px;
+	}
+
+	.news-block-two .inner-box{
+		padding: 20px 20px 30px;
+	}
+
+	.text-blocks{
+		text-align: center;
+	}
+
+	.faq-section .title-column h2,
+	.donate-section .title-column h2{
+		font-size: 36px;
+	}
+
+	.accordion-box .block .acc-btn{
+		font-size: 18px;
+	}
+
+	.page-banner{
+		padding: 70px 0px 90px;
+	}
+
+	.cause-details .inner-box .donate-info{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.cause-details .inner-box h2{
+		font-size: 30px;
+	}
+
+	.cause-details .inner-box .lower-content{
+		padding-top: 50px;
+	}
+
+	.page-banner h1{
+		font-size: 36px;
+	}
+
+	.shop-upper-box .items-label,
+	.shop-upper-box .sort-by{
+		width: 100%;
+	}
+
+	.product-details .image-column .image-box .icon{
+		right: 20px;
+		top: 20px;
+	}
+
+	.comments-area .comment-box.reply-comment{
+		padding-left: 0;
+	}
+
+	.related-products .sec-title h2{
+		font-size: 24px;
+	}
+
+	.cart-section .table-box{
+		overflow-x: auto;
+	}
+
+	.cart-section .apply-coupon,
+	.cart-section .link-box,
+	.cart-section .apply-coupon .form-group,
+	.cart-section .coupon-outer .link-box{
+		width: 100%;
+		margin: 0 0 10px;
+		max-width: none;
+	}
+
+	.cart-section .apply-coupon .form-group input,
+	.cart-section .apply-coupon .theme-btn,
+	.cart-section .link-box .theme-btn{
+		width: 100%;
+	}
+
+	.cart-section .coupon-outer .content-box{
+		padding: 30px 20px;
+	}
+
+	.cart-section .totals-column .inner{
+		max-width: none;
+	}
+
+	.blog-post-detail .inner h2{
+		font-size: 30px;
+		line-height: 1.2em;
+	}
+
+	.info-boxes .info-box .inner-box{
+		min-height: 0;
+	}
+	.testimonial-section-two .owl-dots {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 599px){
+	.main-header .nav-outer .link-box .donate-link{
+		display: none;
+	}
+
+	.main-header .header-top .top-right,
+	.main-header .header-top .info{
+		width: 100%;
+		text-align: center;
+	}
+
+	.main-header .header-top .info li{
+		display: inline-block;
+		float: none;
+		margin: 0 10px;
+	}
+
+	.main-header .header-top .info li .icon{
+		display: none;
+	}
+
+	.main-header .header-top .info .search-btn,
+	.main-header .header-top .info li:before{
+		display: none;
+	}
+
+	.news-block .inner-box .lower-content{
+		padding: 60px 20px 30px;
+	}
+
+	.call-to-action-two h2{
+		font-size: 26px;
+	}
+
+	.cause-block .inner-box h3,
+	.news-block-two .inner-box h3,
+	.event-block-three .inner-box h3,
+	.news-block .inner-box h3,
+	.event-block-two .title-column h3{
+		font-size: 20px;
+		line-height:1.35em;
+	}
+
+	.cause-block .inner-box h3 br,
+	.news-block-two .inner-box h3 br{
+		display: none;
+	}
+
+	.about-feature-two .inner-box{
+		padding: 50px 20px;
+	}
+
+	.event-block-three .inner-box .lower-content{
+		padding: 30px 20px;
+	}
+
+	.banner-carousel .content-box h2 br,
+	.event-block-three .inner-box h3 br{
+		display: none;
+	}
+
+	.news-block-three .news-post{
+		padding: 0 0 35px;
+	}
+
+	.news-block-three .news-post .post-thumb{
+		position: relative;
+		display: block;
+		width: 100%;
+		left: 0;
+		top: 0;
+		height: auto;
+		margin: 0 0 25px;
+	}
+
+	.news-block-three .news-post .post-thumb img{
+		display: block;
+		width: 100%;
+	}
+
+	.what-we-do.style-two .sec-title h2,
+	.donate-section .title-column h2,
+	.blog-post-detail .inner h2{
+		font-size: 30px;
+		line-height: 1.2em;
+	}
+
+	.cause-block .inner-box .lower-content,
+	.cause-block .inner-box .donate-info{
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+
+	.style-three .banner-carousel .content-box,
+	.style-three .banner-carousel .content-box .text{
+		text-align: center;
+	}
+
+	.banner-carousel .slide-item .curved-layer:before{
+		display: none;
+	}
+
+	.style-three .banner-carousel .slide-item{
+		padding: 100px 0px 120px;
+	}
+
+	.call-to-action-two{
+		padding: 80px 0px 50px;
+	}
+
+	.search-popup .search-form fieldset input[type="search"]{
+		width: 100%;
+		padding-right: 30px;
+		font-size: 16px;
+		text-align: center;
+		border-radius: 12px 12px 0px 0px;
+	}
+
+	.search-popup .search-form fieldset input[type="submit"],
+	.search-popup .search-form fieldset button{
+		width: 100%;
+		position: relative;
+		right: 0;
+		top: 0;
+		text-align: center;
+		border-radius: 0px 0px 12px 12px;
+	}
+
+	.mixitup-gallery .filters li{
+		width: 100%;
+		margin: 0 0 10px;
+		background: #cccccc;
+	}
+
+	.comments-area .comment,
+	.product-details .comments-area .comment{
+		padding-left: 0;
+	}
+
+	.product-details .comments-area .comment-box .author-thumb,
+	.comments-area .comment-box .author-thumb{
+		position: relative;
+		left: 0;
+		top: 0;
+		margin: 0 0 25px;
+	}
+
+	.product-details .comments-area .comment-box .rating{
+		position: relative;
+		padding: 0px 0px 20px;
+		right: 0;
+		top: 0;
+	}
+
+	.social-icon-three li a{
+		width: 40px;
+		height: 40px;
+		line-height: 38px;
+		font-size: 15px;
+	}
+
+	.order-detail .cart-outer{
+		overflow-x: auto;
+	}
+
+	.donate-form .select-box{
+		width: 50%;
+	}
+
+	.donate-section{
+		padding-top: 80px;
+	}
+
+	.blog-post-detail .post-share-options .pull-left,
+	.blog-post-detail .post-share-options .pull-right{
+		width: 100%;
+		padding-top: 10px;
+	}
+
+	.comments-area .comment-box .reply-btn{
+		position: relative;
+		right: 0;
+		top: 0;
+		margin-top: 20px;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+
+	.main-header.header-style-three .header-upper .logo-box{
+		padding: 27px 0px;
+	}
+
+	.main-header.header-style-three .header-upper .logo-box .logo{
+		padding: 0;
+	}
+
+	.main-header.header-style-three .header-upper .logo-box .logo img{
+		width: 150px;
+		height: auto;
+	}
+	
+	.about-section .right-column .images .image-block{
+		width:100%;	
+	}
+	.donation-section .wrapper-box {
+		padding: 30px;
+	}
+	.causes-section-three.style-two .image-column .image {
+		width: 100%;
+	}
+}
