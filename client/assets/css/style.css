@@ -766,9 +766,9 @@ img{
 .main-header .header-upper .logo img{
 	position: relative;
 	display: inline-block;
-	max-width: 100%;
-	height: auto;
-	z-index:1;
+	max-width: 76%;
+    height: auto;
+  
 }
 
 .main-header .header-upper .social-links{
@@ -3615,7 +3615,7 @@ img{
 	margin-bottom:35px;
 }
 
-.main-footer .logo-widget{
+.main-footer .widget{
 	position:relative;
 }
 
