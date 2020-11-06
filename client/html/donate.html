@@ -17,6 +17,8 @@
 <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
 <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
 
+<script src="https://js.stripe.com/v3/"></script>
+
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -252,26 +254,30 @@
                     <div class="form-column col-lg-6 col-md-12 col-sm-12">
                     	<div class="inner">
                         	<div class="donate-form">
-                                <form method="post" action="http://html.commonsupport.xyz/2019/loveus/contact.html">
+                                <form 
+                                    method="post" 
+                                    id="donation-form" 
+                                    onsubmit="event.preventDefault(); handlePayment();"
+                                >
                                     <h3>Your Donation</h3>
                                     
                                     <div class="form-group">
                                         <div class="field-label">How much would you like to donate?</div>
                                         <div class="select-amount clearfix">
-                                            <div class="select-box"><input type="radio" name="payment-group" id="radio-one"><label for="radio-one">$10</label></div>
-                                            <div class="select-box"><input type="radio" name="payment-group" id="radio-two"><label for="radio-two">$20</label></div>
-                                            <div class="select-box"><input type="radio" name="payment-group" id="radio-three" checked><label for="radio-three">$50</label></div>
-                                            <div class="select-box"><input type="radio" name="payment-group" id="radio-four"><label for="radio-four">$100</label></div>
+                                            <div class="select-box"><input type="radio" name="donatedAmount" id="radio-one" value="10.00"><label for="radio-one">$10</label></div>
+                                            <div class="select-box"><input type="radio" name="donatedAmount" id="radio-two" value="20.00"><label for="radio-two">$20</label></div>
+                                            <div class="select-box"><input type="radio" name="donatedAmount" id="radio-three" value="50.00" checked><label for="radio-three">$50</label></div>
+                                            <div class="select-box"><input type="radio" name="donatedAmount" id="radio-four" value="100.00"><label for="radio-four">$100</label></div>
                                         </div>
-                                        <div class="input-box"><input type="text" name="other-payment" value="" placeholder="or Give a Custom Amount"></div>
+                                        <!-- <div class="input-box"><input type="text" name="other-payment" value="" placeholder="or Give a Custom Amount"></div> -->
                                     </div>
                                     
                                     <div class="method">
                                         <h3>Payment Method</h3>
                                         <div class="form-group">
                                             <div class="clearfix">
-                                            	<div class="radio-block"><input type="radio" id="radio-1" name="method"><label for="radio-1">Test Donation</label></div>
-                                                <div class="radio-block"><input type="radio" id="radio-2" name="method"><label for="radio-2">Offline Donation</label></div>
+                                            	<div class="radio-block"><input type="radio" id="radio-1" name="method"><label for="radio-1">Stripe </label></div>
+                                                <!-- <div class="radio-block"><input type="radio" id="radio-2" name="method"><label for="radio-2">Offline Donation</label></div> -->
                                             </div>
                                         </div>
                                     </div>
@@ -281,17 +287,21 @@
                                     
                                         <div class="row clearfix">
                                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                                <div class="field-label">First Name</div>
-                                                <input type="text" name="field-name" value="" placeholder="First Name" required>
+                                                <div class="field-label"> Name</div>
+                                                <input type="text" name="donaterName" value="" placeholder="First Name" required>
                                             </div>
                                             <div class="form-group col-lg-6 col-md-6 col-sm-12">
-                                                <div class="field-label">Last Name</div>
-                                                <input type="text" name="field-name" value="" placeholder="Last Name">
+                                                <div class="field-label">Email</div>
+                                                <input type="email" name="donaterEmail" value="" placeholder="Email">
                                             </div>
                                             
                                             <div class="form-group col-lg-12 col-md-12 col-sm-12">
-                                                <div class="field-label">Email address</div>
-                                                <input type="email" name="field-name" value="" placeholder="Email address" required>
+                                                <div class="field-label">Phone Number</div>
+                                                <input type="text" name="donaterPhoneNumber" value="" placeholder="Phone Number" required>
+                                            </div>
+                                            <div class="form-group col-lg-12 col-md-12 col-sm-12">
+                                                <div class="field-label">Donation Issue</div>
+                                                <input type="text" name="donaterIssue" value="" placeholder="Donation Issue" required>
                                             </div>
                                             
                                             <div class="form-group col-lg-12 col-md-12 col-sm-12">
@@ -452,7 +462,38 @@
 <script src="../assets/js/lazyload.js"></script>
 <script src="../assets/js/scrollbar.js"></script>
 <script src="../assets/js/script.js"></script>
+<script type="text/javascript">
+    // Create an instance of the Stripe object with your publishable API key
+    var stripe = Stripe('pk_test_51HiN7yLWgkx67UK7j1ZYbumAuYQxjLSsCxlF9JIbsUNJv0axIuB8id6PIJYtVBO6EKGrOB2EBKsCQh4am9k4nXxD00Ot3CVaIc');
 
+
+    function handlePayment() {
+        //var formData = new FormData(document.getElementById('donation-form'));
+        var formData = JSON.stringify($('#donation-form').serializeArray());
+        fetch('http://127.0.0.1/work/orphan_support-php/server/donations.php', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: formData
+            })
+            .then(function(response) {
+                return response.json();
+            })
+            .then(function(session) {
+                return stripe.redirectToCheckout({ sessionId: session.id });
+            })
+            .then(function(result) {
+                // If `redirectToCheckout` fails due to a browser or network
+                // error, you should display the localized error message to your
+                // customer using `error.message`.
+                if (result.error) {
+                alert(result.error.message);
+                }
+            })
+            .catch(function(error) {
+                console.error('Error:', error);
+            });
+    } 
+  </script>
 </body>
 
 <!-- Mirrored from html.commonsupport.xyz/2019/loveus/donate.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:03:26 GMT -->
