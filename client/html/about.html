@@ -584,7 +584,62 @@
             
         </div>
     </section>
+        
+
+
+<?php
+    //establish connection to the mysql database using mysqli acess layer
+    $serverName = 'localhost';
+    $userName   = 'root';
+    $passWord   = '';
+    $dbName     = 'orphansupport';
+
+    $db = new mysqli($serverName, $userName, $passWord, $dbName);
+    if($db->connect_error) {
+        //throw an error if generated while establishing the connection with the dataBase
+        die('Connect Error: ' . $db->connect_error);
+    }
+    $sql = "SELECT * FROM `childrendetails`";
+    $result = mysqli_query($db, $sql);
+    $num = mysqli_num_rows($result);
+
+    echo "
+    <div class='sec-title centered' style='margin-top: 50px;'>
+        
+        <h2>Children Details</h2>
+        
+    </div>
+    ";
+
+    if($num> 0){
+        
     
+        // We can fetch in a better way using the while loop
+        while($row = mysqli_fetch_assoc($result)){
+            // echo var_dump($row);
+            $nc = $row['nickName'];
+            $on = $row['orphanageName'];
+            $gen = $row['gender'];
+            $oh = $row['orphanHistory'];
+            echo "
+            <center><div class='card' style='width: 50rem; margin-top: 50px; margin-bottom: 50px; box-shadow:   5px 10px #3cc88f;max-width: 100%;'>
+                <div class='card-body'>
+                  <h4 class='card-title'>Name : $nc</h4>
+                  <h6 class='card-subtitle mb-2 text-muted'>Orpanage Name : $on</h6>
+                  <p class='card-text'>Gender : $gen</p>
+                  <p class='card-text'><b>Orphan History</b> : $oh</p>
+                  
+                </div>
+              </div></center>
+            ";
+        
+        }
+    
+    
+    }
+?>
+
+<center><img src="https://www.greeneview.k12.oh.us/docs/_full_/district/kindergarten-clipart-1.jpg?id=1244&thumbwidth=190&fullwidth=500" style="max-width: 100%;"></center>
     
     <!-- Call To Action Section -->
     <section class="call-to-action-two">
