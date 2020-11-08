@@ -8923,11 +8923,11 @@ img.lazy-image.loaded{
 ***/
 .container-custom{
     margin-top: 70px;
-    background-color: rgba(0,0,0,0.05);
+    background-color: rgba(0,0,0,0.001);
     border-radius:12px;
-    -webkit-box-shadow:0px 15px 30px 5px rgba(0,0,0,0.10);
-	-ms-box-shadow:0px 15px 30px 5px rgba(0,0,0,0.10);
-	box-shadow:0px 15px 30px 5px rgba(0,0,0,0.10);
+    -webkit-box-shadow:0px 15px 30px 5px rgba(47, 247, 124,0.20);
+	-ms-box-shadow:0px 15px 30px 5px rgba(47, 247, 124,0.20);
+	box-shadow:0px 15px 30px 5px rgba(47, 247, 124,0.20);
 }
 .image-block{
 	position:relative;
@@ -8973,4 +8973,14 @@ img.lazy-image.loaded{
 /*pagination*/
 .pagination .page-item a{
     color:#02d981;
+}
+
+/*container-custom*/
+.container-custom-1{
+
+    background-color: rgba(0,0,0,0.001);
+    border-radius:12px;
+    -webkit-box-shadow:0px 15px 30px 5px rgba(47, 247, 124,0.10);
+	-ms-box-shadow:0px 15px 30px 5px rgba(47, 247, 124,0.10);
+	box-shadow:0px 15px 30px 5px rgba(47, 247, 124,0.10);
 }
