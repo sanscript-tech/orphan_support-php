@@ -1581,3 +1581,27 @@
 .donation-section .contact-form .form-group label {
 	margin-right: 15px;
 }
+
+
+/*
+==================
+map sectrion in contact us
+==================
+*/
+.container-custom .map-column .map-canvas{
+    width: 10%;
+    height: 100%;
+}
+.map-container-3{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container-3 iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
