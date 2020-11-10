@@ -2,10 +2,10 @@
 -- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Oct 29, 2020 at 04:14 AM
+-- Host: localhost
+-- Generation Time: Nov 10, 2020 at 11:05 PM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- PHP Version: 7.2.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -29,10 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `blogs` (
   `id` int(255) NOT NULL,
-  `blogDetails` varchar(255) NOT NULL,
-  `writerName` varchar(255) NOT NULL,
-  `writerEmail` varchar(255) NOT NULL
+  `firstName` varchar(255) NOT NULL,
+  `lastName` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `tags` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `blogArea` varchar(1500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
+
+--
+-- Dumping data for table `blogs`
+--
+
+INSERT INTO `blogs` (`id`, `firstName`, `lastName`, `email`, `tags`, `title`, `blogArea`) VALUES
+(1, 'Debargha ', 'MUkherjee', 'debargham15@gmail.com', 'Children', 'test data', 'test data'),
+(2, 'Debargha ', 'MUkherjee', 'debargham15@gmail.com', 'Children', 'test data', 'test data');
 
 -- --------------------------------------------------------
 
@@ -48,6 +59,33 @@ CREATE TABLE `childrendetails` (
   `orphanageId` int(255) NOT NULL,
   `orphanHistory` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf32;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `id` int(255) NOT NULL,
+  `blogId` int(255) NOT NULL,
+  `userName` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `msg` varchar(1000) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`id`, `blogId`, `userName`, `email`, `msg`) VALUES
+(1, 2, 'debargha', 'debargham14@gmail.com', 'test data'),
+(2, 2, 'debargha', 'a@d.n', 'test data'),
+(3, 2, 'adrian', 'a@d.n', 'test data 2'),
+(4, 1, 'debargha', 'debargham14@gmail.com', 'test'),
+(5, 1, 'debargha', 'debargham14@gmail.com', 'test'),
+(6, 1, 'Doggo me', 'd@n.a', 'test'),
+(7, 1, 'adrian', 'a@d.n', 'test 4');
 
 -- --------------------------------------------------------
 
@@ -137,6 +175,27 @@ CREATE TABLE `reportissue` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_comment`
+--
+
+CREATE TABLE `tbl_comment` (
+  `comment_id` int(255) NOT NULL,
+  `parent_comment_id` int(255) NOT NULL,
+  `comment` varchar(500) NOT NULL,
+  `comment_sender_name` varchar(500) NOT NULL,
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tbl_comment`
+--
+
+INSERT INTO `tbl_comment` (`comment_id`, `parent_comment_id`, `comment`, `comment_sender_name`, `date`) VALUES
+(23, 0, '  Nice Work', 'debargha', '2020-11-10 17:19:34');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `visitordetails`
 --
 
@@ -163,6 +222,12 @@ ALTER TABLE `blogs`
 -- Indexes for table `childrendetails`
 --
 ALTER TABLE `childrendetails`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `comment`
+--
+ALTER TABLE `comment`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -196,6 +261,12 @@ ALTER TABLE `reportissue`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  ADD PRIMARY KEY (`comment_id`);
+
+--
 -- Indexes for table `visitordetails`
 --
 ALTER TABLE `visitordetails`
@@ -209,13 +280,19 @@ ALTER TABLE `visitordetails`
 -- AUTO_INCREMENT for table `blogs`
 --
 ALTER TABLE `blogs`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `childrendetails`
 --
 ALTER TABLE `childrendetails`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `comment`
+--
+ALTER TABLE `comment`
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `donateus`
@@ -246,6 +323,12 @@ ALTER TABLE `parentdetails`
 --
 ALTER TABLE `reportissue`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `tbl_comment`
+--
+ALTER TABLE `tbl_comment`
+  MODIFY `comment_id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `visitordetails`
