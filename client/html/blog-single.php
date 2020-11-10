@@ -1,4 +1,38 @@
+<?php
+    session_start();
+  
+   $serverName = 'localhost';
+   $userName = 'root';
+   $passWord = 'Debmukh@2206';
+   $dbName = 'orphansupport';
+   
+   $db = new mysqli($serverName, $userName, $passWord, $dbName);
+   if ($db->connect_error) {
+       //throw an error if generated while establishing the connection with the dataBase
+       die('Connect Error: ' . $db->connect_error);
+   }
+   else {
+        if(isset($_POST['comment'])) {
+        
+            $blogId   = $_SESSION['blogId'];
+            $userName = $_POST['username'];
+            $email    = $_POST['email'];
+            $message  = $_POST['message'];
 
+            $sql = "INSERT INTO comment (blogId, userName, email, msg) VALUES ('$blogId', '$userName', '$email', '$message')";
+            $result = $db->query($sql);
+
+            if(!$result) {
+                    // entry into the database failed 
+                //  echo "<h1>" . "UNSUCESSFUL" . "</h1>";
+            }
+            else {
+            //  echo "<h1>" . "ENTRY INTO THE DATABASE SUCESSFUL" . "</h1>";
+            
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -29,7 +63,7 @@
 
 <div class="page-wrapper">
     <!-- Preloader -->
-    <div class="preloader"><div class="icon"></div></div>
+    <!-- <div class="preloader"><div class="icon"></div></div> -->
 
     <!-- Main Header -->
     <header class="main-header">
@@ -125,10 +159,10 @@
                                             <li><a href="donate.html">Make Donation</a></li>
                                         </ul>
                                     </li>
-                                    <li class="current dropdown"><a href="blog.html">Blog</a>
+                                    <li class="current dropdown"><a href="blog.php">Blog</a>
                                         <ul>
-                                            <li><a href="blog.html">Our Blog</a></li>
-											<li><a href="blog-single.html">Blog Single</a></li>
+                                            <li><a href="blog.php">Our Blog</a></li>
+											<!-- <li><a href="blog-single.php">Blog Single</a></li> -->
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
@@ -236,6 +270,7 @@
     
     
     <!--Sidebar Page Container-->
+    
     <div class="sidebar-page-container">
         <div class="auto-container ">
             <div class="row clearfix">
@@ -243,7 +278,7 @@
                 <!--Content Side / Blog Sidebar-->
                 <div class="content-side col-lg-12 col-md-12 col-sm-12  ">
                     <!--Blog Posts-->
-                    <div class="blog-post-detail">
+                    <!-- <div class="blog-post-detail">
                         <div class="inner">
                         	<div class="post-meta">
                                 <ul class="clearfix">
@@ -266,17 +301,45 @@
                                 <p>Mollit anim id est laborum perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam volupe.</p>
                                 <p>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi sed nesciunt. neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit quia non numquam eius modi tempora incidunt ut labore.</p>
                             </div>
-                        </div>
+                        </div> -->
+                        <?php
+                           
+                            require_once('/opt/lampp/htdocs/orphan_support-php/config.php');
                         
-                        <div class="post-share-options clearfix">
+                           
+                                if(isset($_POST['readBlog'])) {
+                                    $id = $_POST['blogId'];
+                                    $_SESSION['blogId'] = $id;
+                                    echo "<h1>Blog #" . $_SESSION['blogId'] . "</h1>"; 
+                                    $id = $_SESSION['blogId'];
+                                    $sql = "SELECT * FROM blogs WHERE id = '$id'";
+                                    
+                                    $result = $db->query($sql);
+
+                                    if($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()){
+                                            echo '<div class = "blog-post-detail"';
+                                            echo '<div class = "content">';
+                                            echo '<p><h1><b>' . $row['title'] . '</b></h1></p>';
+                                            echo '<p><h4>' . $row['blogArea'] . '</h4></p>';
+                                            echo '</div>';
+                                            echo '</div>';
+                                        }
+                                    }
+                                }
+                            
+                            
+                        ?>
+                        
+                        <!-- <div class="post-share-options clearfix">
                             <div class="pull-left">
                                 <p>Tags : </p>
                                 <ul class="tags">
                                     <li><a href="#">Children</a></li>
                                     <li><a href="#">Volunteer</a></li>
                                 </ul>                               
-                            </div>
-
+                            </div> -->
+                            <div class="post-share-options clearfix">
                             <div class="social-links pull-right">
                                 <p>Share:</p>
                                 <ul class="social-icons">
@@ -287,25 +350,28 @@
                                 </ul>
                             </div>
                         </div>
+                            </div>
 
                     </div>
                     
                     <!-- Comments Area -->
+<!--                    
                     <div class="comments-area">
                         <div class="group-title"><h3>Comments</h3></div>
                         <div class="comment-box">
                             <div class="comment">
-                                <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-1.jpg" alt=""></div> 
-                                <div class="comment-info">
+                                <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-1.jpg" alt=""></div>  -->
+                                <!-- <div class="comment-info">
                                     <h4 class="name">Hanson Deck</h4>
                                     <div class="time">November 7, 2020 at 1:44 pm</div>
                                 </div>
                                 <div class="text">Great Job man</div>
                                 <a href="#" class="reply-btn"><span class="arrow_back"></span> Reply</a>
-                            </div>
-                        </div>
+                            </div> --> 
 
-                        <div class="comment-box reply-comment">
+                        <!-- </div> -->
+
+                        <!-- <div class="comment-box reply-comment">
                             <div class="comment">
                                 <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-2.jpg" alt=""></div> 
                                 <div class="comment-info">
@@ -328,38 +394,42 @@
                                 <a href="#" class="reply-btn"><span class="arrow_back"></span> Reply</a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     
                     <!--Comment Form-->
+                   
                     <div class="container comment-form default-form container-custom">
-                        <div class="group-title centered"><h2>Leave a Comment</h2></div>
+                        <div class="group-title centered"><h2>Leave a Thought !</h2></div>
 
-                        <form method="post" action="#">
+                        <form id = "frm-comment">
                             <div class="row clearfix">
-                                
+                               
                                 <div class="col-md-6 col-sm-12 form-group">
-                                    <h5>Name</h5>
-                                    <input class="container-custom-1" type="text" name="username" placeholder="Your Name *" required="">
-                                </div>
-
-                                <div class="col-md-6 col-sm-12 form-group">
-                                    <h5>Email-id</h5>
-                                    <input class="container-custom-1"type="email" name="email" placeholder="Your Email *" required="">
+                                <!-- <input type="hidden" name="comment_id" id="commentId" placeholder="Name" > -->
+                                <input type="hidden" name="comment_id" id = "commentId" placeholder = "Name"><input  class="container-custom-1"
+                    type="text" name="name" id="name" placeholder="Name" required = "">
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 form-group">
-                                    <h5>Comment</h5>
-                                    <textarea class="container-custom-1"name="message" placeholder="Your Comments *"></textarea>
+                                <textarea class="input-field" type="text" name="comment"
+                    id="comment" placeholder="Add a Comment">  </textarea>
                                 </div>
                                 
                                 <div class="col-md-12 col-sm-12 form-group centered">
-                                    <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="btn-title">Post Comment</span></button>
+                                <input type = "button" class="theme-btn btn-submit" id="submitButton"
+                 value = "Publish" onclick = "postReply(0)"><div id="comment-message"><span class="btn-title"></span>
                                 </div>
                                 <br>
                             </div>
                         </form>
+                            <div id = "output"></div>
+                       
+                       
+           
                     </div>
-
+                    
+                    <!-- comment form -->
+                   
                     
                 </div>
                 
@@ -367,6 +437,8 @@
             </div>
         </div>
     </div>
+
+
     <!-- End Sidebar Page Container -->
 
 
@@ -483,7 +555,7 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-up-arrow"></span></div>
-
+<script src="jquery-3.2.1.min.js"></script>
 <script src="../assets/js/jquery.js"></script>
 <script src="../assets/js/popper.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
@@ -496,18 +568,102 @@
 <script src="../assets/js/scrollbar.js"></script>
 <script src="../assets/js/script.js"></script>
 
+
+<script>
+    
+            function postReply(commentId) {
+                $('#commentId').val(commentId);
+                $("#name").focus();
+            }
+
+            $("#submitButton").click(function () {
+            	   $("#comment-message").css('display', 'none');
+                var str = $("#frm-comment").serialize();
+
+                $.ajax({
+                    url: "comment-add.php",
+                    data: str,
+                    type: 'post',
+                    success: function (response)
+                    {
+                        var result = eval('(' + response + ')');
+                        if (response)
+                        {
+                        	$("#comment-message").css('display', 'inline-block');
+                            $("#name").val("");
+                            $("#comment").val("");
+                            $("#commentId").val("");
+                     	   listComment();
+                        } else
+                        {
+                            alert("Failed to add comments !");
+                            return false;
+                        }
+                    }
+                });
+            });
+            
+            $(document).ready(function () {
+            	   listComment();
+            });
+
+            function listComment() {
+                $.post("comment-list.php",
+                        function (data) {
+                               var data = JSON.parse(data);
+                            
+                            var comments = "";
+                            var replies = "";
+                            var item = "";
+                            var parent = -1;
+                            var results = new Array();
+
+                            var list = $("<ul class='outer-comment'>");
+                            var item = $("<li>").html(comments);
+
+                            for (var i = 0; (i < data.length); i++)
+                            {
+                                var commentId = data[i]['comment_id'];
+                                parent = data[i]['parent_comment_id'];
+
+                                if (parent == "0")
+                                {
+                                    var comments = "<div class='comment-box'><div class='comment'> <h4 class='name'><div class='comment-info'>" + data[i]['comment_sender_name'] + 
+    "</h4><div class='time'>" + data[i]['date'] + "</div></div><div class='text'>" + data[i]['comment'] + "<div><a class='btn-reply' onclick='postReply(" + commentId + ")'>Reply</a></div>" + " </div></div></div>" ;
+
+                                    var item = $("<li>").html(comments);
+                                    list.append(item);
+                                    var reply_list = $('<ul>');
+                                    item.append(reply_list);
+                                    listReplies(commentId, data, reply_list);
+                                }
+                            }
+                            $("#output").html(list);
+                        });
+            }
+
+            function listReplies(commentId, data, list) {
+                for (var i = 0; (i < data.length); i++)
+                {
+                    if (commentId == data[i].parent_comment_id)
+                    {
+                        var comments = "<div class='comment-row'>"+
+                        " <div class='comment-info'><span class='commet-row-label'>from</span> <span class='posted-by'>" + data[i]['comment_sender_name'] + " </span> <span class='commet-row-label'>at</span> <span class='posted-at'>" + data[i]['date'] + "</span></div>" + 
+                        "<div class='comment-text'>" + data[i]['comment'] + "</div>"+
+                        "<div><a class='btn-reply' onClick='postReply(" + data[i]['comment_id'] + ")'>Reply</a></div>"+
+                        "</div>" + "<div><class='btn-reply' onClick='postReply(" + commentId + ")'>Reply</a></div>"+"</div>";
+                        var item = $("<li>").html(comments);
+                        var reply_list = $('<ul>');
+                        list.append(item);
+                        item.append(reply_list);
+                        listReplies(data[i].comment_id, data, reply_list);
+                    }
+                }
+            }
+</script>
+
+
 </body>
 
 <!-- Mirrored from html.commonsupport.xyz/2019/loveus/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:05:09 GMT -->
 </html>
-
-var comments = "<div class='comment-box'><div class='comment'> <h4 class='name'><div class='comment-info'>" + data[i]['comment_sender_name'] + 
-    "</h4><div class='time'>" + data[i]['date'] + "</div></div><div class='text'>" + data[i]['comment'] + " </div></div></div>"
-
-
-
-    comments = "<div class='comment-row'>"+
-        "<div class='comment-info'><span class='commet-row-label'>from</span> <span class='posted-by'>" + data[i]['comment_sender_name'] + " </span> <span class='commet-row-label'>at</span> <span class='posted-at'>" + data[i]['date'] + "</span></div>" + 
-        "<div class='comment-text'>" + data[i]['comment'] + "</div>"+
-        "<div><a class='btn-reply' onClick='postReply(" + commentId + ")'>Reply</a></div>"+
-        "</div>";
