@@ -1,11 +1,46 @@
-../assets/<!DOCTYPE html>
+<?php
+    session_start();
+  
+   $serverName = 'localhost';
+   $userName = 'root';
+   $passWord = 'Debmukh@2206';
+   $dbName = 'orphansupport';
+   
+   $db = new mysqli($serverName, $userName, $passWord, $dbName);
+   if ($db->connect_error) {
+       //throw an error if generated while establishing the connection with the dataBase
+       die('Connect Error: ' . $db->connect_error);
+   }
+   else {
+        if(isset($_POST['comment'])) {
+        
+            $blogId   = $_SESSION['blogId'];
+            $userName = $_POST['username'];
+            $email    = $_POST['email'];
+            $message  = $_POST['message'];
+
+            $sql = "INSERT INTO comment (blogId, userName, email, msg) VALUES ('$blogId', '$userName', '$email', '$message')";
+            $result = $db->query($sql);
+
+            if(!$result) {
+                    // entry into the database failed 
+                //  echo "<h1>" . "UNSUCESSFUL" . "</h1>";
+            }
+            else {
+            //  echo "<h1>" . "ENTRY INTO THE DATABASE SUCESSFUL" . "</h1>";
+            
+            }
+        }
+    }
+?>
+<!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from html.commonsupport.xyz/2019/loveus/volunteers.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:03:26 GMT -->
+<!-- Mirrored from html.commonsupport.xyz/2019/loveus/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:05:09 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
-<title>LoveUs - Charity and Fundraising HTML Template | LoveUs Volunteers</title>
+<title>LoveUs - Charity and Fundraising HTML Template | Blog Details</title>
 <!-- Stylesheets -->
 <link href="../assets/css/bootstrap.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -28,7 +63,7 @@
 
 <div class="page-wrapper">
     <!-- Preloader -->
-    <div class="preloader"><div class="icon"></div></div>
+    <!-- <div class="preloader"><div class="icon"></div></div> -->
 
     <!-- Main Header -->
     <header class="main-header">
@@ -38,19 +73,19 @@
 				<div class="inner clearfix">
                     <div class="top-left">
                         <ul class="social-links clearfix">
-                            <li class="social-title">Follow Us :</li>
-                            <li><a href="#"><img src="../assets/images/facebook.png" width="25"></a></li>
-                            <li><a href="#"><img src="../assets/images/twitter-sq.png" width="25"></a></li>
-                            <li><a href="#"><img src="../assets/images/li.png" width="25"></a></li>
-                            <li><a href="#"><img src="../assets/images/insta.png" width="25"></a></li>
+                            <li class="social-title">Follow Us:</li>
+                            <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                            <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                            <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                            <li><a href="#"><span class="fab fa-pinterest-p"></span></a></li>
                         </ul>
                     </div>
     
                     <div class="top-right">
                         <ul class="info clearfix">
                             <li class="search-btn"><button type="button" class="theme-btn search-toggler"><span class="fa fa-search"></span></button></li>
-                            <li><a href="tel:12345615523"><img src="../assets/images/call.png" width="25"> Call: &nbsp;123 4561 5523</a></li>
-                            <li><a href="mailto:info@templatepath.com"><a href="tel:12345615523"><img src="../assets/images/mail.png" width="25"> Email: &nbsp;info@loveuscharity.com</a></a></li>
+                            <li><a href="tel:12345615523"><span class="icon fa fa-phone-alt"></span> Call: &nbsp;123 4561 5523</a></li>
+                            <li><a href="mailto:info@templatepath.com"><span class="icon fa fa-envelope"></span> Email: &nbsp;info@loveuscharity.com</a></li>
                         </ul>
                     </div>
                 </div>
@@ -94,7 +129,7 @@
                                             </li>
                                         </ul>
                                     </li>
-									<li class="current dropdown"><a href="about.html">About</a>
+									<li class="dropdown"><a href="about.html">About</a>
                                         <ul>
                                             <li><a href="about.html">About Us</a></li>
 											<li><a href="services.html">Our Services</a></li>
@@ -124,10 +159,10 @@
                                             <li><a href="donate.html">Make Donation</a></li>
                                         </ul>
                                     </li>
-                                    <li class="dropdown"><a href="blog.html">Blog</a>
+                                    <li class="current dropdown"><a href="blog.php">Blog</a>
                                         <ul>
-                                            <li><a href="blog.html">Our Blog</a></li>
-											<li><a href="blog-single.html">Blog Single</a></li>
+                                            <li><a href="blog.php">Our Blog</a></li>
+											<!-- <li><a href="blog-single.php">Blog Single</a></li> -->
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
@@ -169,7 +204,7 @@
             <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index-2.html"><img src="../assets/images/logo.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index.html"><img src="../assets/images/favicon.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
 				<!--Social Links-->
 				<div class="social-links">
@@ -192,7 +227,7 @@
         <div class="popup-inner">
             <div class="overlay-layer"></div>
             <div class="search-form">
-                <form method="post" action="http://html.commonsupport.xyz/2019/loveus/index.html">
+                <form method="post" action="#">
                     <div class="form-group">
                         <fieldset>
                             <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
@@ -219,165 +254,193 @@
 
     <!-- Page Banner Section -->
     <section class="page-banner">
-        <div class="image-layer lazy-image" data-bg="url('../assets/images/background/bg-banner-1.jpg')"></div>
+        <div class="image-layer lazy-image" data-bg="url('../assets/images/Blog-gallery/blog-main3.jpg')"></div>
         <div class="bottom-rotten-curve"></div>
 
         <div class="auto-container">
-            <h1>Our Volunteers</h1>
+            <h1>Blog Details</h1>
             <ul class="bread-crumb clearfix">
-                <li><a href="index-2.html">Home</a></li>
-                <li class="active">Our Volunteers</li>
+                <li><a href="index.html">Home</a></li>
+                <li class="active">Blog Details</li>
             </ul>
         </div>
 
     </section>
     <!--End Banner Section -->
     
-    <!--Team Section-->
-    <section class="team-section">
-        <div class="bottom-rotten-curve"></div>
-        
-        <div class="auto-container">
-                        
+    
+    <!--Sidebar Page Container-->
+    
+    <div class="sidebar-page-container">
+        <div class="auto-container ">
             <div class="row clearfix">
-            
-                <!--Team Block-->
-                <div class="team-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="0ms">
-                        <figure class="image-box"><a href="#"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="images/resource/team-image-1.jpg" alt=""></a></figure>
-                        <div class="lower-box">
-                            <div class="content">
-                                <h3><a href="#">Catherine Jones</a></h3>
-                                <div class="designation">Engineer</div>
-                                <div class="social-links">
-                                    <ul class="clearfix">
-                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Team Block-->
-                <div class="team-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="300ms">
-                        <figure class="image-box"><a href="#"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="images/resource/team-image-2.jpg" alt=""></a></figure>
-                        <div class="lower-box">
-                            <div class="content">
-                                <h3><a href="#">Lauren Davis</a></h3>
-                                <div class="designation">Photographer</div>
-                                <div class="social-links">
-                                    <ul class="clearfix">
-                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!--Team Block-->
-                <div class="team-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="600ms">
-                        <figure class="image-box"><a href="#"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="images/resource/team-image-3.jpg" alt=""></a></figure>
-                        <div class="lower-box">
-                            <div class="content">
-                                <h3><a href="#">Susan hardson</a></h3>
-                                <div class="designation">Reporter</div>
-                                <div class="social-links">
-                                    <ul class="clearfix">
-                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!--Team Block-->
-                <div class="team-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="0ms">
-                        <figure class="image-box"><a href="#"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="images/resource/team-image-4.jpg" alt=""></a></figure>
-                        <div class="lower-box">
+                <!--Content Side / Blog Sidebar-->
+                <div class="content-side col-lg-12 col-md-12 col-sm-12  ">
+                    <!--Blog Posts-->
+                    <!-- <div class="blog-post-detail">
+                        <div class="inner">
+                        	<div class="post-meta">
+                                <ul class="clearfix">
+                                    <li><a href="#"><span class="icon fa fa-user"></span> Admin</a></li>
+                                    <li><a href="#"><span class="icon fa fa-comments"></span> 3 Comments</a></li>
+                                    <li><a href="#"><span class="icon fa fa-share-alt"></span></a></li>
+                                </ul>
+                            </div>
+                            <h2>Raise Fund for Healthy Food</h2>
+                            
                             <div class="content">
-                                <h3><a href="#">Fernando Vicente</a></h3>
-                                <div class="designation">Engineer</div>
-                                <div class="social-links">
-                                    <ul class="clearfix">
-                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                    </ul>
-                                </div>
+                                <p class="big-text">Cupidatat non proident sunt culpa qui officia deserunt mollit anim idest laborum sed ux perspiciatis unde omnis iste natuserror sit voluptatem accusantium. dolore laudantium totam rem aperiam eaque.</p>
+                                
+                               
+                             
+                                <p>Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Repreh enderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.</p>
+                                <br>
+                                <h3>Startups Are Still</h3>
+                                <p>Mollit anim id est laborum perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam volupe.</p>
+                                <p>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi sed nesciunt. neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit quia non numquam eius modi tempora incidunt ut labore.</p>
+                            </div>
+                        </div> -->
+                        <?php
+                           
+                            require_once('/opt/lampp/htdocs/orphan_support-php/config.php');
+                        
+                           
+                                if(isset($_POST['readBlog'])) {
+                                    $id = $_POST['blogId'];
+                                    $_SESSION['blogId'] = $id;
+                                    echo "<h1>Blog #" . $_SESSION['blogId'] . "</h1>"; 
+                                    $id = $_SESSION['blogId'];
+                                    $sql = "SELECT * FROM blogs WHERE id = '$id'";
+                                    
+                                    $result = $db->query($sql);
+
+                                    if($result->num_rows > 0) {
+                                        while($row = $result->fetch_assoc()){
+                                            echo '<div class = "blog-post-detail"';
+                                            echo '<div class = "content">';
+                                            echo '<p><h1><b>' . $row['title'] . '</b></h1></p>';
+                                            echo '<p><h4>' . $row['blogArea'] . '</h4></p>';
+                                            echo '</div>';
+                                            echo '</div>';
+                                        }
+                                    }
+                                }
+                            
+                            
+                        ?>
+                        
+                        <!-- <div class="post-share-options clearfix">
+                            <div class="pull-left">
+                                <p>Tags : </p>
+                                <ul class="tags">
+                                    <li><a href="#">Children</a></li>
+                                    <li><a href="#">Volunteer</a></li>
+                                </ul>                               
+                            </div> -->
+                            <div class="post-share-options clearfix">
+                            <div class="social-links pull-right">
+                                <p>Share:</p>
+                                <ul class="social-icons">
+                                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-vimeo-v"></span></a></li>
+                                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
+                                </ul>
                             </div>
                         </div>
+                            </div>
+
                     </div>
-                </div>
-                
-                <!--Team Block-->
-                <div class="team-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="300ms">
-                        <figure class="image-box"><a href="#"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="images/resource/team-image-5.jpg" alt=""></a></figure>
-                        <div class="lower-box">
-                            <div class="content">
-                                <h3><a href="#">Catherine Rose</a></h3>
-                                <div class="designation">Collector</div>
-                                <div class="social-links">
-                                    <ul class="clearfix">
-                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                    </ul>
+                    
+                    <!-- Comments Area -->
+<!--                    
+                    <div class="comments-area">
+                        <div class="group-title"><h3>Comments</h3></div>
+                        <div class="comment-box">
+                            <div class="comment">
+                                <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-1.jpg" alt=""></div>  -->
+                                <!-- <div class="comment-info">
+                                    <h4 class="name">Hanson Deck</h4>
+                                    <div class="time">November 7, 2020 at 1:44 pm</div>
                                 </div>
+                                <div class="text">Great Job man</div>
+                                <a href="#" class="reply-btn"><span class="arrow_back"></span> Reply</a>
+                            </div> --> 
+
+                        <!-- </div> -->
+
+                        <!-- <div class="comment-box reply-comment">
+                            <div class="comment">
+                                <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-2.jpg" alt=""></div> 
+                                <div class="comment-info">
+                                    <h5 class="name">Norman Gordon</h5>
+                                    <div class="time">October 7, 2019 at 12:26 am</div>
+                                </div>
+                                <div class="text">Amazing Thought</div>
+                                <a href="#" class="reply-btn"><span class="arrow_back"></span> Reply</a>
                             </div>
                         </div>
-                    </div>
-                </div>
-                
-                <!--Team Block-->
-                <div class="team-block col-xl-4 col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box wow fadeInUp" data-wow-delay="600ms">
-                        <figure class="image-box"><a href="#"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="images/resource/team-image-6.jpg" alt=""></a></figure>
-                        <div class="lower-box">
-                            <div class="content">
-                                <h3><a href="#">John Travolta</a></h3>
-                                <div class="designation">Engineer</div>
-                                <div class="social-links">
-                                    <ul class="clearfix">
-                                        <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                        <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                    </ul>
+
+                        <div class="comment-box">
+                            <div class="comment">
+                                <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-3.jpg" alt=""></div> 
+                                <div class="comment-info">
+                                    <h4 class="name">Jake Weary</h4>
+                                    <div class="time">November 16, 2019 at 10:14 pm</div>
                                 </div>
+                                <div class="text">Nice Thought</div>
+                                <a href="#" class="reply-btn"><span class="arrow_back"></span> Reply</a>
                             </div>
                         </div>
+                    </div> -->
+                    
+                    <!--Comment Form-->
+                   
+                    <div class="container comment-form default-form container-custom">
+                        <div class="group-title centered"><h2>Leave a Thought !</h2></div>
+
+                        <form id = "frm-comment">
+                            <div class="row clearfix">
+                               
+                                <div class="col-md-6 col-sm-12 form-group">
+                                <!-- <input type="hidden" name="comment_id" id="commentId" placeholder="Name" > -->
+                                <input type="hidden" name="comment_id" id = "commentId" placeholder = "Name"><input  class="container-custom-1"
+                    type="text" name="name" id="name" placeholder="Name" required = "">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 form-group">
+                                <textarea class="input-field" type="text" name="comment"
+                    id="comment" placeholder="Add a Comment">  </textarea>
+                                </div>
+                                
+                                <div class="col-md-12 col-sm-12 form-group centered">
+                                <input type = "button" class="theme-btn btn-submit" id="submitButton"
+                 value = "Publish" onclick = "postReply(0)"><div id="comment-message"><span class="btn-title"></span>
+                                </div>
+                                <br>
+                            </div>
+                        </form>
+                            <div id = "output"></div>
+                       
+                       
+           
                     </div>
+                    
+                    <!-- comment form -->
+                   
+                    
                 </div>
                 
+
             </div>
-            
         </div>
-    </section>
-    
-    
-    
-    <!-- Call To Action Section -->
-    <section class="call-to-action-two">
-        <div class="auto-container">
-            <div class="inner clearfix">
-                <div class="title-box wow fadeInLeft" data-wow-delay="0ms"><h2>Become A Volunteer</h2></div>
-                <div class="link-box wow fadeInRight" data-wow-delay="0ms"><a href="contact.html" class="theme-btn btn-style-five"><span class="btn-title">Get Involved</span></a></div>
-            </div>
-        </div>
-    </section>
-    <!--End Gallery Section -->
+    </div>
+
+
+    <!-- End Sidebar Page Container -->
+
 
     
 	<!-- Main Footer -->
@@ -492,7 +555,7 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-up-arrow"></span></div>
-
+<script src="jquery-3.2.1.min.js"></script>
 <script src="../assets/js/jquery.js"></script>
 <script src="../assets/js/popper.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
@@ -505,7 +568,102 @@
 <script src="../assets/js/scrollbar.js"></script>
 <script src="../assets/js/script.js"></script>
 
+
+<script>
+    
+            function postReply(commentId) {
+                $('#commentId').val(commentId);
+                $("#name").focus();
+            }
+
+            $("#submitButton").click(function () {
+            	   $("#comment-message").css('display', 'none');
+                var str = $("#frm-comment").serialize();
+
+                $.ajax({
+                    url: "comment-add.php",
+                    data: str,
+                    type: 'post',
+                    success: function (response)
+                    {
+                        var result = eval('(' + response + ')');
+                        if (response)
+                        {
+                        	$("#comment-message").css('display', 'inline-block');
+                            $("#name").val("");
+                            $("#comment").val("");
+                            $("#commentId").val("");
+                     	   listComment();
+                        } else
+                        {
+                            alert("Failed to add comments !");
+                            return false;
+                        }
+                    }
+                });
+            });
+            
+            $(document).ready(function () {
+            	   listComment();
+            });
+
+            function listComment() {
+                $.post("comment-list.php",
+                        function (data) {
+                               var data = JSON.parse(data);
+                            
+                            var comments = "";
+                            var replies = "";
+                            var item = "";
+                            var parent = -1;
+                            var results = new Array();
+
+                            var list = $("<ul class='outer-comment'>");
+                            var item = $("<li>").html(comments);
+
+                            for (var i = 0; (i < data.length); i++)
+                            {
+                                var commentId = data[i]['comment_id'];
+                                parent = data[i]['parent_comment_id'];
+
+                                if (parent == "0")
+                                {
+                                    var comments = "<div class='comment-box'><div class='comment'> <h4 class='name'><div class='comment-info'>" + data[i]['comment_sender_name'] + 
+    "</h4><div class='time'>" + data[i]['date'] + "</div></div><div class='text'>" + data[i]['comment'] + "<div><a class='btn-reply' onclick='postReply(" + commentId + ")'>Reply</a></div>" + " </div></div></div>" ;
+
+                                    var item = $("<li>").html(comments);
+                                    list.append(item);
+                                    var reply_list = $('<ul>');
+                                    item.append(reply_list);
+                                    listReplies(commentId, data, reply_list);
+                                }
+                            }
+                            $("#output").html(list);
+                        });
+            }
+
+            function listReplies(commentId, data, list) {
+                for (var i = 0; (i < data.length); i++)
+                {
+                    if (commentId == data[i].parent_comment_id)
+                    {
+                        var comments = "<div class='comment-row'>"+
+                        " <div class='comment-info'><span class='commet-row-label'>from</span> <span class='posted-by'>" + data[i]['comment_sender_name'] + " </span> <span class='commet-row-label'>at</span> <span class='posted-at'>" + data[i]['date'] + "</span></div>" + 
+                        "<div class='comment-text'>" + data[i]['comment'] + "</div>"+
+                        "<div><a class='btn-reply' onClick='postReply(" + data[i]['comment_id'] + ")'>Reply</a></div>"+
+                        "</div>" + "<div><class='btn-reply' onClick='postReply(" + commentId + ")'>Reply</a></div>"+"</div>";
+                        var item = $("<li>").html(comments);
+                        var reply_list = $('<ul>');
+                        list.append(item);
+                        item.append(reply_list);
+                        listReplies(data[i].comment_id, data, reply_list);
+                    }
+                }
+            }
+</script>
+
+
 </body>
 
-<!-- Mirrored from html.commonsupport.xyz/2019/loveus/volunteers.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:03:26 GMT -->
+<!-- Mirrored from html.commonsupport.xyz/2019/loveus/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:05:09 GMT -->
 </html>
