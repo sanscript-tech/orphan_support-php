@@ -1,12 +1,44 @@
+<?php
+    session_start();
+    $serverName = 'localhost';
+    $userName = 'root';
+    $passWord = 'Debmukh@2206';
+    $dbName = 'orphansupport';
+    
+    $db = new mysqli($serverName, $userName, $passWord, $dbName);
+    if ($db->connect_error) {
+        //throw an error if generated while establishing the connection with the dataBase
+        die('Connect Error: ' . $db->connect_error);
+    }
+    else {
+        if(isset($_POST['submitform'])) {
+            $firstName = $_POST['firstname'];
+            $lastName = $_POST['lastname'];
+            $email = $_POST['email'];
+            $tags = $_POST['tags'];
+            $title = $_POST['title'];
+            $blogArea = $_POST['blogarea'];
+
+            $sql = "INSERT INTO blogs(firstName, lastName, email, tags, title, blogArea) VALUES ('$firstName', '$lastName', '$email', '$tags', '$title', '$blogArea')";
+            $result = $db->query($sql);
+
+            if(!$result){
+                //error in creating the page;
+            }
+            else{
+            } 
+        }
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- Mirrored from html.commonsupport.xyz/2019/loveus/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:05:09 GMT -->
+<!-- Mirrored from html.commonsupport.xyz/2019/loveus/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:05:09 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
 <meta charset="utf-8">
-<title>LoveUs - Charity and Fundraising HTML Template | Blog Details</title>
+<title>LoveUs - Charity and Fundraising HTML Template | Blog Page</title>
 <!-- Stylesheets -->
 <link href="../assets/css/bootstrap.css" rel="stylesheet">
 <link href="../assets/css/style.css" rel="stylesheet">
@@ -77,23 +109,7 @@
                             <div class="collapse navbar-collapse show clearfix" id="navbarSupportedContent">
                                 <ul class="navigation clearfix">
                                     <li class="dropdown"><a href="index.html">Home</a>
-                                        <ul>
-                                            <li><a href="index-2.html">Home page 01</a></li>
-                                            <li><a href="index-3.html">Home page 02</a></li>
-                                            <li><a href="index-4.html">Home page 03</a></li>
-                                            <li><a href="index-5.html">Home page 04</a></li>
-                                            <li><a href="index-6.html">Home page 05</a></li>
-                                            <li><a href="index-7.html">Home page 06</a></li>
-                                            <li><a href="index-8.html">Home page 07</a></li>
-                                            <li><a href="index-9.html">Home page 08</a></li>
-                                            <li class="dropdown"><a href="index-2.html">Header Styles</a>
-                                                <ul>
-                                                    <li><a href="index-2.html">Header Style One</a></li>
-                                                    <li><a href="index-3.html">Header Style Two</a></li>
-                                                    <li><a href="index-4.html">Header Style Three</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
+                                        
                                     </li>
 									<li class="dropdown"><a href="about.html">About</a>
                                         <ul>
@@ -125,10 +141,10 @@
                                             <li><a href="donate.html">Make Donation</a></li>
                                         </ul>
                                     </li>
-                                    <li class="current dropdown"><a href="blog.html">Blog</a>
+                                    <li class="current dropdown"><a href="blog.php">Blog</a>
                                         <ul>
-                                            <li><a href="blog.html">Our Blog</a></li>
-											<li><a href="blog-single.html">Blog Single</a></li>
+                                            <li><a href="blog.php">Our Blog</a></li>
+											<!-- <li><a href="blog-single.html">Blog Single</a></li> -->
                                         </ul>
                                     </li>
                                     <li><a href="contact.html">Contact</a></li>
@@ -170,7 +186,7 @@
             <div class="close-btn"><span class="icon flaticon-cancel"></span></div>
             
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="../assets/images/favicon.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="index-2.html"><img src="../assets/images/logo.png" alt="" title=""></a></div>
                 <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
 				<!--Social Links-->
 				<div class="social-links">
@@ -193,7 +209,7 @@
         <div class="popup-inner">
             <div class="overlay-layer"></div>
             <div class="search-form">
-                <form method="post" action="#">
+                <form method="post" action="http://html.commonsupport.xyz/2019/loveus/index.html">
                     <div class="form-group">
                         <fieldset>
                             <input type="search" class="form-control" name="search-input" value="" placeholder="Search Here" required >
@@ -220,14 +236,14 @@
 
     <!-- Page Banner Section -->
     <section class="page-banner">
-        <div class="image-layer lazy-image" data-bg="url('../assets/images/Blog-gallery/blog-main3.jpg')"></div>
+        <div class="image-layer lazy-image" data-bg="url('../assets/images/Blog-gallery/blog-main.jpg')"></div>
         <div class="bottom-rotten-curve"></div>
 
         <div class="auto-container">
-            <h1>Blog Details</h1>
+            <h1>Blog Page</h1>
             <ul class="bread-crumb clearfix">
                 <li><a href="index.html">Home</a></li>
-                <li class="active">Blog Details</li>
+                <li class="active">Blog Page</li>
             </ul>
         </div>
 
@@ -235,140 +251,207 @@
     <!--End Banner Section -->
     
     
+    <!-- Blog Gallery section-->
+    <div class="container container-custom">
+       
+            <div class="row">
+                            <div class="image-block col-lg-8 col-md-8 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><img src="../assets/images/Blog-gallery/blog1.jpg"  alt=""></figure>
+                                    </div>
+                          
+                                </div>
+                            </div>
+                             <div class="image-block col-lg-4 col-md-4 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><img src="../assets/images/Blog-gallery/blog2.jpg"  alt=""></figure>
+                                    </div>
+                          
+                                </div>
+                            </div>
+                             <div class="image-block col-lg-3 col-md-4 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><img src="../assets/images/Blog-gallery/blog5.jpg"  alt=""></figure>
+                                    </div>
+                          
+                                </div>
+                            </div>
+                             <div class="image-block col-lg-6 col-md-4 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><img src="../assets/images/Blog-gallery/blog4.jpg"  alt=""></figure>
+                                    </div>
+                          
+                                </div>
+                            </div>
+                            
+                            
+                            <div class="image-block col-lg-3 col-md-4 col-sm-12">
+                                <div class="inner-box">
+                                    <div class="image-box">
+                                        <figure class="image"><img src="../assets/images/Blog-gallery/blog6.jpg"  alt=""></figure>
+                                    </div>
+                          
+                                </div>
+                            </div>
+                             
+                </div>
+        </div>
+    <!-- End Blog Gallery section-->
+    
     <!--Sidebar Page Container-->
     <div class="sidebar-page-container">
-        <div class="auto-container ">
+        <div class="auto-container">
             <div class="row clearfix">
 
-                <!--Content Side / Blog Sidebar-->
-                <div class="content-side col-lg-12 col-md-12 col-sm-12  ">
+                <!--Content Side -->
+                <div class="content-side col-lg-12 col-md-12 col-sm-12">
                     <!--Blog Posts-->
-                    <div class="blog-post-detail">
-                        <div class="inner">
-                        	<div class="post-meta">
-                                <ul class="clearfix">
-                                    <li><a href="#"><span class="icon fa fa-user"></span> Admin</a></li>
-                                    <li><a href="#"><span class="icon fa fa-comments"></span> 3 Comments</a></li>
-                                    <li><a href="#"><span class="icon fa fa-share-alt"></span></a></li>
-                                </ul>
-                            </div>
-                            <h2>Raise Fund for Healthy Food</h2>
+                    <div class="blog-posts">
+                        <div class="row clearfix">
+                            <!--News Block-->
                             
-                            <div class="content">
-                                <p class="big-text">Cupidatat non proident sunt culpa qui officia deserunt mollit anim idest laborum sed ux perspiciatis unde omnis iste natuserror sit voluptatem accusantium. dolore laudantium totam rem aperiam eaque.</p>
-                                
-                               
-                             
-                                <p>Lorem ipsum dolor sit amet, consectetur pisicelit sed do eiusmod tempor incidie labore magna aliqua enim ad minim veniam quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat. Repreh enderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa quae ab illo inventore.</p>
-                                <br>
-                                <h3>Startups Are Still</h3>
-                                <p>Mollit anim id est laborum perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo enim ipsam volupe.</p>
-                                <p>Aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi sed nesciunt. neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipisci velit quia non numquam eius modi tempora incidunt ut labore.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="post-share-options clearfix">
-                            <div class="pull-left">
-                                <p>Tags : </p>
-                                <ul class="tags">
-                                    <li><a href="#">Children</a></li>
-                                    <li><a href="#">Volunteer</a></li>
-                                </ul>                               
-                            </div>
 
-                            <div class="social-links pull-right">
-                                <p>Share:</p>
-                                <ul class="social-icons">
-                                    <li><a href="#"><span class="fab fa-facebook-f"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-twitter"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-vimeo-v"></span></a></li>
-                                    <li><a href="#"><span class="fab fa-linkedin-in"></span></a></li>
-                                </ul>
-                            </div>
-                        </div>
+                            <?php
+                            
+                                $sql = 'SELECT * FROM blogs';
+                                $result = $db->query($sql);
+                                $id = 0;
+                                if($result->num_rows > 0) {
+                                    while($row = $result->fetch_assoc()) {
+                                        
+                                        $id = $row['id'];
+                                        
+                                        $sql1 = "SELECT * FROM comment WHERE blogId = '$id'" ;
+                                        $result1 = $db->query($sql1);
 
-                    </div>
-                    
-                    <!-- Comments Area -->
-                    <div class="comments-area">
-                        <div class="group-title"><h3>Comments</h3></div>
-                        <div class="comment-box">
-                            <div class="comment">
-                                <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-1.jpg" alt=""></div> 
-                                <div class="comment-info">
-                                    <h4 class="name">Hanson Deck</h4>
-                                    <div class="time">November 7, 2020 at 1:44 pm</div>
-                                </div>
-                                <div class="text">Great Job man</div>
-                                <a href="#" class="reply-btn"><span class="arrow_back"></span> Reply</a>
-                            </div>
-                        </div>
-
-                        <div class="comment-box reply-comment">
-                            <div class="comment">
-                                <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-2.jpg" alt=""></div> 
-                                <div class="comment-info">
-                                    <h5 class="name">Norman Gordon</h5>
-                                    <div class="time">October 7, 2019 at 12:26 am</div>
-                                </div>
-                                <div class="text">Amazing Thought</div>
-                                <a href="#" class="reply-btn"><span class="arrow_back"></span> Reply</a>
-                            </div>
-                        </div>
-
-                        <div class="comment-box">
-                            <div class="comment">
-                                <div class="author-thumb"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="../assets/images/resource/author-thumb-3.jpg" alt=""></div> 
-                                <div class="comment-info">
-                                    <h4 class="name">Jake Weary</h4>
-                                    <div class="time">November 16, 2019 at 10:14 pm</div>
-                                </div>
-                                <div class="text">Nice Thought</div>
-                                <a href="#" class="reply-btn"><span class="arrow_back"></span> Reply</a>
-                            </div>
+                                        $count = $result1->num_rows;
+                                        echo '<div class="news-block col-lg-4 col-md-6 col-sm-12" id="card-4">';
+                                        echo ' <div class="inner-box">';
+                                        echo '<div class="image-box">';
+                                        echo '<figure class="image"><a href="blog-single.php"><img class="lazy-image" src="../assets/images/Blog-cards/card4.jpg" data-src="../assets/images/Blog-cards/card4.jpg" alt=""></a></figure>';
+                                        echo '</div>';
+                                        echo '<div class="lower-content">';
+                                        echo '<div class="date">9 <span class="month">Mar</span></div>';
+                                        echo '<h5> Blog #' . $row['id'] . '</h5>';
+                                        echo '<h3><a href="blog-single.html">'. $row['title'] . '</a></h3>';
+                                        
+                                        echo '<div class="post-meta">';
+                                        echo '<ul class="clearfix">';
+                                                echo '<li><a href="#"><span class="icon fa fa-user"></span> ' . $row['firstName'] . ' ' . $row['lastName'] . '</a></li>';
+                                                echo '<li><a href="#"><span class="icon fa fa-comments"></span>' . $count . ' Comments'. '</a></li>';
+                                                echo '<li><a href="#"><span class="icon fa fa-share-alt"></span></a></li>';
+                                           echo ' </ul>';
+                                        echo '</div>';
+                                    echo '</div>';
+                                    echo '</div>';
+                                    echo '</div>';
+                                   // $id = $id + 1;
+                                    }
+                                    
+                                    
+                                }
+                            ?>
+                           
+        
                         </div>
                     </div>
                     
-                    <!--Comment Form-->
-                    <div class="container comment-form default-form container-custom">
-                        <div class="group-title centered"><h2>Leave a Comment</h2></div>
-
-                        <form method="post" action="#">
+                </div>
+                
+                
+            </div>
+           <!--            pagination-->
+           <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center">
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                </li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                  <a class="page-link" href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- choose a blog -->
+    
+    <div class="container container-custom comment-form default-form ">
+           <div class="group-title centered"><h1>Choose a blog ID</h1></div>
+            <form action="blog-single.php" method = "post">
                             <div class="row clearfix">
                                 
+                                <div class="col-md-6 col-sm-12 form-group"><h5>Blog Id</h5>
+                                    <input class="container-custom-1" type="number" name="blogId" placeholder="Blog Id" required="">
+                                </div>
+
+                                <div class="col-md-12 col-sm-12 form-group centered">
+                                    <button class="theme-btn btn-style-one" type="submit" name="readBlog" ><span class="btn-title"> Read Blog </a></span></button>
+                                </div>
+                            </div>
+                </form>
+            </div>
+    </div>
+<!--write a blog-->
+       <div class="container container-custom comment-form default-form ">
+           <div class="group-title centered"><h1>Write a Blog</h1></div>
+            <form action="" method = "post">
+                            <div class="row clearfix">
+                                
+                                <div class="col-md-6 col-sm-12 form-group"><h5>First Name</h5>
+                                    <input class="container-custom-1" type="text" name="firstname" placeholder="First Name *" required="">
+                                </div>
                                 <div class="col-md-6 col-sm-12 form-group">
-                                    <h5>Name</h5>
-                                    <input class="container-custom-1" type="text" name="username" placeholder="Your Name *" required="">
+                                    <h5>Last Name</h5>
+                                    <input class="container-custom-1" type="text" name="lastname" placeholder="Last Name *" required="">
                                 </div>
 
                                 <div class="col-md-6 col-sm-12 form-group">
                                     <h5>Email-id</h5>
-                                    <input class="container-custom-1"type="email" name="email" placeholder="Your Email *" required="">
+                                    <input class="container-custom-1" type="email" name="email" placeholder="Your Email *" required="">
+                                </div>
+                                 <div class="col-md-6 col-sm-12 form-group">
+                                    <h5>Blog-Tag</h5>
+                                   <select class="container-custom-1"  name="tags" class=" form-control-lg">
+                                    <option>Children</option>
+                                    <option>Family</option>
+                                    <option>Education</option>
+                                    <option>Happines</option>
+                                    <option>Life</option>
+                                    <option>Volunteer</option>
+                                    
+                                    </select>
+                                </div>
+                                <div class="col-md-12 col-sm-12 form-group">
+                                    <h5>Title</h5>
+                                    <input class="container-custom-1" type="text" name="title" placeholder="Title *" required="" maxlength="35">
                                 </div>
 
                                 <div class="col-md-12 col-sm-12 form-group">
-                                    <h5>Comment</h5>
-                                    <textarea class="container-custom-1"name="message" placeholder="Your Comments *"></textarea>
+                                    <h5>Blog-Area</h5>
+                                    <textarea class="container-custom-1"  name="blogarea" placeholder="Blog Area" required=""></textarea>
                                 </div>
                                 
                                 <div class="col-md-12 col-sm-12 form-group centered">
-                                    <button class="theme-btn btn-style-one" type="submit" name="submit-form"><span class="btn-title">Post Comment</span></button>
+                                    <button class="theme-btn btn-style-one" type="submit" name="submitform" onclick = "return mess();"><span class="btn-title">Post Blog</span></button>
                                 </div>
                                 <br>
                             </div>
                         </form>
-                    </div>
-
-                    
-                </div>
-                
-
-            </div>
-        </div>
+    
     </div>
-    <!-- End Sidebar Page Container -->
-
 
     
 	<!-- Main Footer -->
@@ -383,7 +466,7 @@
 						<div class="footer-widget logo-widget">
                         	<div class="widget-content">
                                 <div class="footer-logo">
-                                    <a href="index-2.html"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="images/footer-logo.png" alt="" /></a>
+                                    <a href="index.html"><img class="lazy-image" src="../assets/images/resource/image-spacer-for-validation.png" data-src="images/footer-logo.png" alt="" /></a>
                                 </div>
                                 <div class="text">This Orphan Support site is a non-profit initiative, by Team Sanscript, and is developed under Autumn of Open Source (AOS). Our name "Sanscript" was inspired by ancient Indian language named "Sanskrit", and our goal is about spreading positivity with technologies and being an ever growing open source community. Follow our community to stay up-to-date with our other such initiatives.</div>
                                 <ul class="social-links clearfix">
@@ -483,7 +566,11 @@
 
 <!--Scroll to top-->
 <div class="scroll-to-top scroll-to-target" data-target="html"><span class="flaticon-up-arrow"></span></div>
-
+<script> 
+    function mess() {
+        alert('Your Blog is added successfully');
+    }
+</script>
 <script src="../assets/js/jquery.js"></script>
 <script src="../assets/js/popper.min.js"></script>
 <script src="../assets/js/bootstrap.min.js"></script>
@@ -498,16 +585,5 @@
 
 </body>
 
-<!-- Mirrored from html.commonsupport.xyz/2019/loveus/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:05:09 GMT -->
+<!-- Mirrored from html.commonsupport.xyz/2019/loveus/blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 25 Oct 2020 16:05:09 GMT -->
 </html>
-
-var comments = "<div class='comment-box'><div class='comment'> <h4 class='name'><div class='comment-info'>" + data[i]['comment_sender_name'] + 
-    "</h4><div class='time'>" + data[i]['date'] + "</div></div><div class='text'>" + data[i]['comment'] + " </div></div></div>"
-
-
-
-    comments = "<div class='comment-row'>"+
-        "<div class='comment-info'><span class='commet-row-label'>from</span> <span class='posted-by'>" + data[i]['comment_sender_name'] + " </span> <span class='commet-row-label'>at</span> <span class='posted-at'>" + data[i]['date'] + "</span></div>" + 
-        "<div class='comment-text'>" + data[i]['comment'] + "</div>"+
-        "<div><a class='btn-reply' onClick='postReply(" + commentId + ")'>Reply</a></div>"+
-        "</div>";

@@ -591,7 +591,7 @@
     //establish connection to the mysql database using mysqli acess layer
     $serverName = 'localhost';
     $userName   = 'root';
-    $passWord   = '';
+    $passWord   = 'Debmukh@2206';
     $dbName     = 'orphansupport';
 
     $db = new mysqli($serverName, $userName, $passWord, $dbName);
